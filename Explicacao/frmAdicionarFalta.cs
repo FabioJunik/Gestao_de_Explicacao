@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace Explicacao
+{
+    public partial class frmAdicionarFalta : Form
+    {
+        DBAuxiliar dbAuxiliar = new DBAuxiliar();
+        principal principal = new principal();
+        MySqlConnection conexao;
+        public frmAdicionarFalta()
+        {
+            InitializeComponent();
+            conexao = dbAuxiliar.buscarConexao();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            conexao.Open();
+            MySqlCommand comando = new MySqlCommand("INSERT INTO tbFalta(dataFalta, cod_Turma, cod_Aluno) VALUES(@dataFalta, @cod_Turma, @cod_Aluno);", conexao);
+            comando.Parameters.Add("@dataFalta", MySqlDbType.String).Value = dtpDataFalta.Value.ToString("yyyy-MM-dd");
+            comando.Parameters.Add("@cod_Turma", MySqlDbType.Int32).Value = int.Parse(cmbCodTurma.Text);
+            comando.Parameters.Add("@cod_Aluno", MySqlDbType.Int32).Value = int.Parse(cmbCodAluno.Text);
+            comando.ExecuteNonQuery();
+            conexao.Close();
+
+            principal.Aviso("Dados inseridos com sucesso!");
+            principal.LimparCampos(this.Controls);
+        }
+
+        private void frmAdicionarFalta_Load(object sender, EventArgs e)
+        {
+
+            conexao.Open();
+            MySqlCommand comando = new MySqlCommand("SELECT codAluno FROM tbAluno;", conexao);
+            var cods = comando.ExecuteReader();
+
+            while (cods.Read())
+            {
+                cmbCodAluno.Items.Add(cods.GetValue(0));
+            }
+
+            cods.Close();
+            comando.CommandText = "SELECT codTurma FROM tbTurma;";
+            cods = comando.ExecuteReader();
+
+            while (cods.Read())
+            {
+                cmbCodTurma.Items.Add(cods.GetValue(0));
+            }
+
+            cods.Close();
+            conexao.Close();
+        }
+    }
+}

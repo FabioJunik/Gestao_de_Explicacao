@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D5A2185-1CC6-4576-BD7D-4DCBE31326FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Explicacao</RootNamespace>
+    <AssemblyName>Explicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\Programas\Bunifu_UI_v1.5.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBAuxiliar.cs" />
+    <Compile Include="frmAdicionarEncarregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarEncarregado.Designer.cs">
+      <DependentUpon>frmAdicionarEncarregado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarFalta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarFalta.Designer.cs">
+      <DependentUpon>frmAdicionarFalta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAluno.Designer.cs">
+      <DependentUpon>frmAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlunoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlunoTurma.Designer.cs">
+      <DependentUpon>frmAlunoTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracoes.Designer.cs">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHorarioTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorarioTurma.Designer.cs">
+      <DependentUpon>frmHorarioTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarPropina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarPropina.Designer.cs">
+      <DependentUpon>frmAdicionarPropina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPropinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPropinas.Designer.cs">
+      <DependentUpon>frmPropinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTurma.Designer.cs">
+      <DependentUpon>frmTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerFaltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerFaltas.Designer.cs">
+      <DependentUpon>frmVerFaltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntrar.Designer.cs">
+      <DependentUpon>frmEntrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarProf.Designer.cs">
+      <DependentUpon>frmAdicionarProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisciplina.Designer.cs">
+      <DependentUpon>frmDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorario.Designer.cs">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInserirNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInserirNota.Designer.cs">
+      <DependentUpon>frmInserirNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarAdm.Designer.cs">
+      <DependentUpon>frmCadastrarAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarAdm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarAdm01.Designer.cs">
+      <DependentUpon>frmCadastrarAdm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarAdm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarAdm02.Designer.cs">
+      <DependentUpon>frmCadastrarAdm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNivel.Designer.cs">
+      <DependentUpon>frmNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNota.Designer.cs">
+      <DependentUpon>frmNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProf.Designer.cs">
+      <DependentUpon>frmProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSala.Designer.cs">
+      <DependentUpon>frmSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarTurma.Designer.cs">
+      <DependentUpon>frmAdicionarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerAlunos.Designer.cs">
+      <DependentUpon>frmVerAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPainelControle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPainelControle.Designer.cs">
+      <DependentUpon>frmPainelControle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarAluno.Designer.cs">
+      <DependentUpon>frmAdicionarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerEncarregados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerEncarregados.Designer.cs">
+      <DependentUpon>frmVerEncarregados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerPropinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerPropinas.Designer.cs">
+      <DependentUpon>frmVerPropinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerProfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerProfs.Designer.cs">
+      <DependentUpon>frmVerProfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerTurmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerTurmas.Designer.cs">
+      <DependentUpon>frmVerTurmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="principal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdicionarEncarregado.resx">
+      <DependentUpon>frmAdicionarEncarregado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarFalta.resx">
+      <DependentUpon>frmAdicionarFalta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAluno.resx">
+      <DependentUpon>frmAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlunoTurma.resx">
+      <DependentUpon>frmAlunoTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracoes.resx">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHorarioTurma.resx">
+      <DependentUpon>frmHorarioTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarPropina.resx">
+      <DependentUpon>frmAdicionarPropina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPropinas.resx">
+      <DependentUpon>frmPropinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTurma.resx">
+      <DependentUpon>frmTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerFaltas.resx">
+      <DependentUpon>frmVerFaltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntrar.resx">
+      <DependentUpon>frmEntrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarProf.resx">
+      <DependentUpon>frmAdicionarProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDisciplina.resx">
+      <DependentUpon>frmDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHorario.resx">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInserirNota.resx">
+      <DependentUpon>frmInserirNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarAdm.resx">
+      <DependentUpon>frmCadastrarAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarAdm01.resx">
+      <DependentUpon>frmCadastrarAdm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarAdm02.resx">
+      <DependentUpon>frmCadastrarAdm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNivel.resx">
+      <DependentUpon>frmNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNota.resx">
+      <DependentUpon>frmNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProf.resx">
+      <DependentUpon>frmProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSala.resx">
+      <DependentUpon>frmSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarTurma.resx">
+      <DependentUpon>frmAdicionarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerAlunos.resx">
+      <DependentUpon>frmVerAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPainelControle.resx">
+      <DependentUpon>frmPainelControle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarAluno.resx">
+      <DependentUpon>frmAdicionarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerEncarregados.resx">
+      <DependentUpon>frmVerEncarregados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerPropinas.resx">
+      <DependentUpon>frmVerPropinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerProfs.resx">
+      <DependentUpon>frmVerProfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerTurmas.resx">
+      <DependentUpon>frmVerTurmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

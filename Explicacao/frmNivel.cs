@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace Explicacao
+{
+    public partial class frmNivel : Form
+    {
+        Panel painel;
+        MySqlConnection conexao;
+        principal principal = new principal();
+        DBAuxiliar dbAuxiliar = new DBAuxiliar();
+        MySqlCommand comando;
+        string query;
+
+        public frmNivel(Panel pnl)
+        {
+            InitializeComponent();
+            painel = pnl;
+            conexao = dbAuxiliar.buscarConexao();
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            conexao.Open();
+
+            comando = new MySqlCommand("INSERT INTO tbnivel values(null,@nivel)", conexao);
+            comando.Parameters.Add("@nivel", MySqlDbType.String).Value = txtNovoNivel.Text;
+            comando.ExecuteNonQuery();
+            comando.Dispose();
+            conexao.Close();
+            principal.LimparCampos(this.Controls);
+            principal.Aviso("Dados inseridos com suecesso!");
+        }
+
+        private void btnNivel_Click(object sender, EventArgs e)
+        {
+            int codNivel = Convert.ToInt32(dgvNivel.CurrentRow.Cells[0].Value);
+            
+            string query = "UPDATE tbNivel SET nome = @nome" +
+                           "WHERE codNivel = @codNivel";
+            conexao.Open();
+            comando = new MySqlCommand(query, conexao);
+            comando.Parameters.Add("@nome", MySqlDbType.String).Value = txtNivel.Text;
+            comando.Parameters.Add("@codNivel", MySqlDbType.Int32).Value = codNivel;
+            comando.Dispose();
+            conexao.Close();
+            mostrarDados();
+
+            principal.Aviso("Dados salvos com sucesso");
+        }
+
+        private void mostrarDados()
+        {
+            string query = "SELECT codNivel AS 'Código', nivel AS 'Nivel' FROM tbNivel;";
+            dgvNivel.DataSource = dbAuxiliar.ApresentarResultados(query);
+        }
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvNivel.Rows.Count == 0) {
+                principal.Aviso("Não exitem dados registados. Impossível concluir esta operação.");
+            }
+
+            if (!principal.Confirmacao("O nível será apagado permanentemente. Deseja continuar?", "APGAR NÍVEL"))
+                return;
+
+            int codNivel = Convert.ToInt32(dgvNivel.CurrentRow.Cells[0].Value);
+            query = $"DELETE FROM tbNivel WHERE codNivel = {codNivel}";
+
+            dbAuxiliar.ExecutarNonQuery(query);
+
+            mostrarDados();
+            principal.Aviso("Dados eliminado com sucesso!");
+        }
+
+        private void frmNivel_Load(object sender, EventArgs e)
+        {
+            mostrarDados();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            principal.AbrirFormulario(new frmPainelControle(painel), painel);
+        }
+    }
+}

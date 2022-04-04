@@ -1,0 +1,227 @@
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\Explicacao.exe.config
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\Explicacao.exe
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\Explicacao.pdb
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.csprojAssemblyReference.cache
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.Properties.Resources.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.csproj.GenerateResource.cache
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.csproj.CoreCompileInputs.cache
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.exe
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.pdb
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.csproj.CopyComplete
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmPrincipal.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\MySql.Data.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\Google.Protobuf.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\ZstdNet.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\System.Buffers.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\bin\Debug\MySql.Data.xml
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.exe.config
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmPainelControle.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmVerAlunos.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmVerTurmas.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmAluno.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmVerProfs.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmTurma.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmAddProf.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmProf.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmProprina.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmDisciplina.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmHorario.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\Explicacao\Explicacao\obj\Debug\Explicacao.frmNivel.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe.config
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.exe
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.pdb
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.pdb
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\MySql.Data.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Google.Protobuf.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\ZstdNet.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\System.Buffers.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\MySql.Data.xml
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csprojResolveAssemblyReference.cache
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.Explicacao.exe.config
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPrincipal.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmDisciplina.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorario.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNivel.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNota.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmProf.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmProprina.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmSala.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmTurma.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerAlunos.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPainelControle.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerProfs.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerTurmas.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.Properties.Resources.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.GenerateResource.Cache
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarProf.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmInserirNota.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarAluno.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmEntrar.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm01.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm02.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmConfigurações.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarEncarregado.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerEncarregados.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarFalta.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerFaltas.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarTurma.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAlunoTurma.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorarioTurma.resources
+C:\Users\Manuel Demo\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmConfiguracoes.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe.config
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.exe
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.pdb
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.pdb
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarEncarregado.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarFalta.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAlunoTurma.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmConfiguracoes.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorarioTurma.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmTurma.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerFaltas.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmEntrar.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPrincipal.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarProf.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmDisciplina.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorario.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmInserirNota.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm01.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm02.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNivel.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNota.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmProf.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmSala.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarTurma.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerAlunos.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPainelControle.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarAluno.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerEncarregados.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerProfs.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerTurmas.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.Properties.Resources.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.GenerateResource.Cache
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAluno.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe.config
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Explicacao.pdb
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\MySql.Data.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Google.Protobuf.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\ZstdNet.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\System.Buffers.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\bin\Debug\MySql.Data.xml
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csprojAssemblyReference.cache
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.exe.config
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarEncarregado.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarFalta.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAluno.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAlunoTurma.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmConfiguracoes.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorarioTurma.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmTurma.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerFaltas.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmConfigurações.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmEntrar.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPrincipal.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarProf.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmDisciplina.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorario.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmInserirNota.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm01.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm02.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNivel.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNota.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmProf.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmProprina.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmSala.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarTurma.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerAlunos.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPainelControle.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarAluno.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerEncarregados.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerProfs.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerTurmas.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.Properties.Resources.resources
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.GenerateResource.cache
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.CoreCompileInputs.cache
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.CopyComplete
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.exe
+C:\Users\Fábio junic\Desktop\Projecto explição\.Definitive\_-_-_-_-_-_-_\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.pdb
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarPropina.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerPropinas.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPropinas.resources
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.csprojResolveAssemblyReference.cache
+C:\Users\DESKTOP-DEMBO\Desktop\projecto-Explicacao\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmMessageBox.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.csprojAssemblyReference.cache
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.exe.config
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarEncarregado.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarFalta.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAluno.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAlunoTurma.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmConfiguracoes.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorarioTurma.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarPropina.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmMessageBox.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPropinas.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmTurma.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerFaltas.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmEntrar.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPrincipal.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarProf.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmDisciplina.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmHorario.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmInserirNota.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm01.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmCadastrarAdm02.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNivel.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmNota.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmProf.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmSala.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarTurma.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerAlunos.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmPainelControle.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmAdicionarAluno.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerEncarregados.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerPropinas.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerProfs.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmVerTurmas.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.Properties.Resources.resources
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.GenerateResource.cache
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.CoreCompileInputs.cache
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.exe
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.pdb
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe.config
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\Explicacao.exe
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\Explicacao.pdb
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\MySql.Data.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\Google.Protobuf.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\ZstdNet.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\System.Buffers.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\MySql.Data.xml
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.CopyComplete
