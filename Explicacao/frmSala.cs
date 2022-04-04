@@ -18,7 +18,9 @@ namespace Explicacao
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         MySqlConnection conexao;
         MySqlCommand comando;
+
         string query;
+        bool click = false;
 
         public frmSala(Panel pnl)
         {
@@ -99,6 +101,39 @@ namespace Explicacao
         private void dgvSala_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisar();
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                pesquisar();
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
+        }
+
+        private void pesquisar()
+        {
+            if (txtPesquisar.Text == "") return;
+
+            int valor = int.Parse(txtPesquisar.Text);
+            string miniQuery = $"WHERE codSala = {valor} Or numero = {valor}";
+
+            query = "SELECT codSala AS 'Código', estado AS 'Desponibilidade', numero AS 'Número' " +
+                    $"FROM tbSala {miniQuery};";
+
+            dgvSala.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
 }
