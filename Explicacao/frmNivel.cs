@@ -18,7 +18,9 @@ namespace Explicacao
         principal principal = new principal();
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         MySqlCommand comando;
+
         string query;
+        bool click;
 
         public frmNivel(Panel pnl)
         {
@@ -90,6 +92,40 @@ namespace Explicacao
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmPainelControle(painel), painel);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisar();
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                pesquisar();
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
+        }
+
+        private void pesquisar()
+        {
+            string miniQuery = $"WHERE nivel LIKE '%{txtPesquisar.Text}%'";
+            int numero = 0;
+
+            if (int.TryParse(txtPesquisar.Text, out numero))
+                miniQuery = $"WHERE codNivel = {txtPesquisar.Text}";
+
+            string query = $"SELECT codNivel AS 'Código', nivel AS 'Nivel' FROM tbNivel {miniQuery};";
+            dgvNivel.DataSource = dbAuxiliar.ApresentarResultados(query);
+
+            dgvNivel.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
 }
