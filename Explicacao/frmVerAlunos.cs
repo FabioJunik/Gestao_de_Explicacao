@@ -17,7 +17,9 @@ namespace Explicacao
         principal principal = new principal();
         DBAuxiliar dbauxiliar = new DBAuxiliar();
         MySqlConnection conexao;
+
         int codAluno;
+        bool click;
 
         public frmVerAlunos(Panel pnl)
         {
@@ -109,21 +111,37 @@ namespace Explicacao
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            string miniQuery= $"WHERE nome LIKE '%{txtPequisar.Text}%'";
+            pesquisar();
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                pesquisar();
+        }
+
+        private void pesquisar()
+        {
+            string miniQuery = $"WHERE nome LIKE '%{txtPesquisar.Text}%'";
             int numero = 0;
 
-            if (int.TryParse(txtPequisar.Text, out numero))
-                miniQuery = $"WHERE codAluno = {txtPequisar.Text}";
+            if (int.TryParse(txtPesquisar.Text, out numero))
+                miniQuery = $"WHERE codAluno = {txtPesquisar.Text}";
 
             string query = "SELECT codAluno AS 'Código', nome AS 'Nome', dataNasc AS 'Data de nascimento', " +
                            "sexo AS 'Sexo', IFNULL(email, 'SEM E-MAIL') AS 'E-mail' FROM tbAluno " +
                            $"{miniQuery};";
 
             dgvAlunos.DataSource = dbauxiliar.ApresentarResultados(query);
+        }
 
-            //dgvAlunos.Columns[0].Width = 75;
-            //dgvAlunos.Columns["Sexo"].Width = 75;
-            //dgvAlunos.Columns["Nome"].Width = 250;
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
         }
     }
 }

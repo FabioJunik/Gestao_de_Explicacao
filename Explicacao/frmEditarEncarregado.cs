@@ -71,8 +71,6 @@ namespace Explicacao
             nome = txtNome.Text;
             sexo = rdFemenino.Checked ? "F" : "M";
 
-
-            MessageBox.Show(nome);
             conexao.Open();
            
             comando = new MySqlCommand($"UPDATE tbEncarregado SET nome = @nome, sexo = @sexo " +
