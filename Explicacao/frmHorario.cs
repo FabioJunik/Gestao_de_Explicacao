@@ -18,8 +18,9 @@ namespace Explicacao
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         MySqlConnection conexao;
         MySqlCommand comando;
-        string query;
 
+        string query;
+        bool click;
 
         public frmHorario(Panel pnl)
         {
@@ -97,6 +98,37 @@ namespace Explicacao
         {
             query = "SELECT codHorario AS 'Código', diaSemana AS 'Dias da Semana', " +
                            "horaInicio AS 'Inicio', horaFim AS 'Fim' FROM tbHorario;";
+            dgvHorarios.DataSource = dbAuxiliar.ApresentarResultados(query);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) pesquisar();
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
+        }
+
+        private void pesquisar()
+        {
+            if (txtPesquisar.Text == "") return;
+
+            int valor = int.Parse(txtPesquisar.Text);
+            string miniQuery = $"WHERE codHorario = {valor} Or diaSemana = {valor}";
+
+            query = "SELECT codHorario AS 'Código', diaSemana AS 'Dias da Semana', " +
+                    $"horaInicio AS 'Inicio', horaFim AS 'Fim' FROM tbHorario {miniQuery};";
             dgvHorarios.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
