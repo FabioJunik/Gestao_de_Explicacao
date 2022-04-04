@@ -16,6 +16,8 @@ namespace Explicacao
         principal principal = new principal();
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         MySqlConnection conexao;
+        MySqlCommand comando;
+
         public frmVerEncarregados()
         {
             InitializeComponent();
@@ -24,13 +26,15 @@ namespace Explicacao
 
         private void frmVerEncarregados_Load(object sender, EventArgs e)
         {
-            string query = "SELECT codEncarregado AS 'Código do Encarregado', nome AS 'Nome', sexo AS 'Sexo' FROM tbEncarregado;";
-            dgvEncarregados.DataSource = dbAuxiliar.ApresentarResultados(query);
+            mostrarDados();
         }
 
         private void frmEditar_Click(object sender, EventArgs e)
         {
+            int codEncarregado = Convert.ToInt32(dgvEncarregados.CurrentRow.Cells[0].Value);
+            frmEditarEncarregado formEditarEncarregado = new frmEditarEncarregado(codEncarregado);
 
+            formEditarEncarregado.ShowDialog();
         }
 
         private void frmEliminar_Click(object sender, EventArgs e)
@@ -42,6 +46,27 @@ namespace Explicacao
             if (!principal.Confirmacao("O encarregado será apagado permanentemente. Deseja continuar?", "APGAR ENCARREGADO"))
                 return;
 
+            int codEncarregado = Convert.ToInt32(dgvEncarregados.CurrentRow.Cells[0].Value);
+
+            conexao.Open();
+            comando = new MySqlCommand("DELETE FROM tbEncarregado WHERE codEncarregado = @codEncarregado;", conexao);
+            comando.Parameters.Add("@codEncarregado", MySqlDbType.Int32).Value = codEncarregado;
+            comando.ExecuteNonQuery();
+
+            comando.CommandText = "DELETE FROM tbAluno_encarregado WHERE cod_Encarregado = @codEncarregado;";
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+
+            mostrarDados();
+            principal.Aviso("Encarregado apagada com sucesso!");
+
+        }
+
+        private void mostrarDados()
+        {
+            string query = "SELECT codEncarregado AS 'Código do Encarregado', nome AS 'Nome', sexo AS 'Sexo' FROM tbEncarregado;";
+            dgvEncarregados.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
 }

@@ -117,6 +117,7 @@ namespace Explicacao
 
             comando = new MySqlCommand("UPDATE tbTelefone SET numero = @telefone " +
                                        $"WHERE {entidade} = @cod;", conexao);
+
             comando.Parameters.Add("@telefone", MySqlDbType.String).Value = telefone;
             comando.Parameters.Add("@cod", MySqlDbType.Int32).Value = cod;
             comando.ExecuteNonQuery();

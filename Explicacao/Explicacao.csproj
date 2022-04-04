@@ -106,6 +106,12 @@
     <Compile Include="frmConfiguracoes.Designer.cs">
       <DependentUpon>frmConfiguracoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditarEncarregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarEncarregado.Designer.cs">
+      <DependentUpon>frmEditarEncarregado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHorarioTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfiguracoes.resx">
       <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarEncarregado.resx">
+      <DependentUpon>frmEditarEncarregado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHorarioTurma.resx">
       <DependentUpon>frmHorarioTurma.cs</DependentUpon>

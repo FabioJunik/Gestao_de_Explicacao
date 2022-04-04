@@ -225,3 +225,4 @@ C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\K4os.Compression
 C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\bin\Debug\MySql.Data.xml
 C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.csproj.CopyComplete
+C:\Users\Fábio junic\Desktop\Explicacao-4\Explicacao\obj\Debug\Explicacao.frmEditarEncarregado.resources

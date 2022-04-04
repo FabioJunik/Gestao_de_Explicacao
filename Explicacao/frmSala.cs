@@ -95,5 +95,10 @@ namespace Explicacao
             principal.AbrirFormulario(new frmPainelControle(painel), painel);
 
         }
+
+        private void dgvSala_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
