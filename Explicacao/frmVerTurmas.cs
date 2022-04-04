@@ -18,6 +18,8 @@ namespace Explicacao
         Panel painelPrincipal;
         MySqlConnection conexao;
 
+        bool click=false;
+
         public frmVerTurmas(Panel panel)
         {
             InitializeComponent();
@@ -76,6 +78,40 @@ namespace Explicacao
 
             principal.Aviso("Dados elimindados com sucesso!!");
             principal.AbrirFormulario(new frmAdicionarTurma(painelPrincipal), painelPrincipal);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisar();
+        }
+
+        private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                pesquisar();
+        }
+
+        private void txtPesquisa_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
+        }
+
+        private void pesquisar()
+        {
+            string miniQuery = $"WHERE nome LIKE '%{txtPesquisar.Text}%'";
+            int numero = 0;
+
+            if (int.TryParse(txtPesquisar.Text, out numero))
+                miniQuery = $"WHERE codTurma = {txtPesquisar.Text}";
+
+            string query = "SELECT codTurma AS 'Codigo', nome AS 'Nome', dataInicio AS 'Data Inicio', " +
+                          $"cod_disciplina, cod_nivel  FROM tbTurma {miniQuery};";
+
+            dgvTurmas.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
 }
