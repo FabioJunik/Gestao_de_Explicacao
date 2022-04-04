@@ -18,7 +18,9 @@ namespace Explicacao
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         MySqlConnection conexao;
         MySqlCommand comando;
+
         string query;
+        bool click;
 
         public frmDisciplina(Panel pnl)
         {
@@ -112,6 +114,40 @@ namespace Explicacao
 
             mostrarDados();
             principal.Aviso("Dados eliminados com sucesso!");
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisar();
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                pesquisar();
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
+        }
+
+        private void pesquisar()
+        {
+            string miniQuery = $"WHERE nome LIKE '%{txtPesquisar.Text}%'";
+            int numero = 0;
+
+            if (int.TryParse(txtPesquisar.Text, out numero))
+                miniQuery = $"WHERE codDisciplina = {txtPesquisar.Text}";
+
+            query = "SELECT codDisciplina AS 'Código', nome AS 'Nome'" +
+                    $" FROM tbDisciplina {miniQuery};";
+            dgvDisciplina.DataSource = dbAuxiliar.ApresentarResultados(query);
+
         }
     }
 }
