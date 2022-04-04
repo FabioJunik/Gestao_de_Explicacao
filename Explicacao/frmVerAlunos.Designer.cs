@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerAlunos));
             this.dgvAlunos = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtPequisar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
             this.btnInserir = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdicionarEncarregado = new Guna.UI2.WinForms.Guna2Button();
             this.btnVerMais = new Guna.UI2.WinForms.Guna2Button();
@@ -103,45 +103,46 @@
             this.dgvAlunos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAlunos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2TextBox1
+            // txtPequisar
             // 
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Pesquise pelo nome ou código";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(40, 102);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 28;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(794, 36);
-            this.guna2TextBox1.TabIndex = 1;
+            this.txtPequisar.BorderThickness = 0;
+            this.txtPequisar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPequisar.DefaultText = "Pesquise pelo nome ou código";
+            this.txtPequisar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPequisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPequisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPequisar.DisabledState.Parent = this.txtPequisar;
+            this.txtPequisar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPequisar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPequisar.FocusedState.Parent = this.txtPequisar;
+            this.txtPequisar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPequisar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPequisar.HoverState.Parent = this.txtPequisar;
+            this.txtPequisar.Location = new System.Drawing.Point(40, 102);
+            this.txtPequisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPequisar.Name = "txtPequisar";
+            this.txtPequisar.PasswordChar = '\0';
+            this.txtPequisar.PlaceholderText = "";
+            this.txtPequisar.SelectedText = "";
+            this.txtPequisar.SelectionStart = 28;
+            this.txtPequisar.ShadowDecoration.Parent = this.txtPequisar;
+            this.txtPequisar.Size = new System.Drawing.Size(794, 36);
+            this.txtPequisar.TabIndex = 1;
             // 
-            // guna2Button1
+            // btnPesquisar
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(776, 102);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(58, 36);
-            this.guna2Button1.TabIndex = 2;
+            this.btnPesquisar.CheckedState.Parent = this.btnPesquisar;
+            this.btnPesquisar.CustomImages.Parent = this.btnPesquisar;
+            this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.HoverState.Parent = this.btnPesquisar;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(776, 102);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.ShadowDecoration.Parent = this.btnPesquisar;
+            this.btnPesquisar.Size = new System.Drawing.Size(58, 36);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnInserir
             // 
@@ -226,8 +227,8 @@
             this.Controls.Add(this.btnVerMais);
             this.Controls.Add(this.btnAdicionarEncarregado);
             this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.txtPequisar);
             this.Controls.Add(this.dgvAlunos);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -244,8 +245,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAlunos;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPequisar;
+        private Guna.UI2.WinForms.Guna2Button btnPesquisar;
         private Guna.UI2.WinForms.Guna2Button btnInserir;
         private Guna.UI2.WinForms.Guna2Button btnAdicionarEncarregado;
         private Guna.UI2.WinForms.Guna2Button btnVerMais;

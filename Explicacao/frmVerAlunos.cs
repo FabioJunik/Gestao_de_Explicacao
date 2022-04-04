@@ -106,5 +106,24 @@ namespace Explicacao
             dgvAlunos.Columns["Sexo"].Width = 75;
             dgvAlunos.Columns["Nome"].Width = 250;
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string miniQuery= $"WHERE nome LIKE '%{txtPequisar.Text}%'";
+            int numero = 0;
+
+            if (int.TryParse(txtPequisar.Text, out numero))
+                miniQuery = $"WHERE codAluno = {txtPequisar.Text}";
+
+            string query = "SELECT codAluno AS 'Código', nome AS 'Nome', dataNasc AS 'Data de nascimento', " +
+                           "sexo AS 'Sexo', IFNULL(email, 'SEM E-MAIL') AS 'E-mail' FROM tbAluno " +
+                           $"{miniQuery};";
+
+            dgvAlunos.DataSource = dbauxiliar.ApresentarResultados(query);
+
+            //dgvAlunos.Columns[0].Width = 75;
+            //dgvAlunos.Columns["Sexo"].Width = 75;
+            //dgvAlunos.Columns["Nome"].Width = 250;
+        }
     }
 }
