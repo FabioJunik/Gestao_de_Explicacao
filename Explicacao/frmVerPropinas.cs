@@ -16,6 +16,9 @@ namespace Explicacao
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         principal principal = new principal();
         Panel painel;
+
+        bool click;
+
         public frmVerPropinas(Panel pnl)
         {
             InitializeComponent();
@@ -68,6 +71,40 @@ namespace Explicacao
             if (!principal.Confirmacao("A propina será apagado permanentemente. Deseja continuar?", "APGAR PROPINA"))
                 return;
 
+        }
+        private void pesquisar()
+        {
+            string miniQuery ="";
+            int numero = 0;
+
+            if (int.TryParse(txtPesquisar.Text, out numero))
+                miniQuery = $"WHERE codPropina = {txtPesquisar.Text}";
+
+            string query = "SELECT codPropina AS 'Código', dataPagamento AS 'Data', quantMeses AS 'Quantidade de meses', " +
+                            $"valor AS 'Valor pago' FROM tbPropina {miniQuery};";
+
+            dgvPropina.DataSource = dbAuxiliar.ApresentarResultados(query);
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                pesquisar();
+
+        }
+
+        private void txtPesquisar_Enter(object sender, EventArgs e)
+        {
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisar();
         }
     }
 }
