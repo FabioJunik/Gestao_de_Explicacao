@@ -16,6 +16,8 @@ namespace Explicacao
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         principal principal = new principal();
         MySqlConnection conexao;
+        MySqlCommand comando;
+
         public frmVerFaltas()
         {
             InitializeComponent();
@@ -30,9 +32,7 @@ namespace Explicacao
 
         private void frmVerFaltas_Load(object sender, EventArgs e)
         {
-            string query = "SELECT codFalta AS 'Código da Falta', dataFalta AS 'Data da falta', cod_Turma AS 'Código da Turma', " +
-                           "cod_Aluno AS 'Código do aluno' FROM tbFalta;";
-            dgvFalta.DataSource = dbAuxiliar.ApresentarResultados(query);
+            mostrarDados();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -46,9 +46,27 @@ namespace Explicacao
                 principal.Aviso("Não existem dados registados. Impossível concluir esta operação.");
                 return;
             }
-            if (!principal.Confirmacao("A falta será apagado permanentemente. Deseja continuar?", "APGAR FALTA"))
+            if (!principal.Confirmacao("A falta será apagado permanentemente. Deseja continuar?", "Apagar Falta"))
                 return;
 
+            int codFalta = Convert.ToInt32(dgvFalta.CurrentRow.Cells[0].Value);
+
+            conexao.Open();
+            comando= new MySqlCommand("DELETE FROM tbFalta WHERE codFalta = @codFalta",conexao);
+            comando.Parameters.Add("@codFalta", MySqlDbType.Int32).Value = codFalta;
+            comando.ExecuteNonQuery();
+            conexao.Close();
+
+            mostrarDados();
+            principal.Aviso("Falta apagada com sucesso!");
+
+        }
+
+        private void mostrarDados()
+        {
+            string query = "SELECT codFalta AS 'Código da Falta', dataFalta AS 'Data da falta', cod_Turma AS 'Código da Turma', " +
+                           "cod_Aluno AS 'Código do aluno' FROM tbFalta;";
+            dgvFalta.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
 }
