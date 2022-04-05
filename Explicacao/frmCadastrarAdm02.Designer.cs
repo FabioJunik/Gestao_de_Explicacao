@@ -93,14 +93,14 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 16F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(90, 37);
+            this.label1.Location = new System.Drawing.Point(50, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 69);
+            this.label1.Size = new System.Drawing.Size(302, 69);
             this.label1.TabIndex = 113;
             this.label1.Text = "Defina uma Norma de pagamento";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDataLimite
             // 

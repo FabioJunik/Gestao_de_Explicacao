@@ -43,13 +43,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 16F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(90, 47);
+            this.label1.Location = new System.Drawing.Point(94, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 29);
+            this.label1.Size = new System.Drawing.Size(204, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Crie sua explicação";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -127,7 +128,7 @@
             this.txtPalavraPasse.Location = new System.Drawing.Point(56, 254);
             this.txtPalavraPasse.Margin = new System.Windows.Forms.Padding(4);
             this.txtPalavraPasse.Name = "txtPalavraPasse";
-            this.txtPalavraPasse.Size = new System.Drawing.Size(278, 42);
+            this.txtPalavraPasse.Size = new System.Drawing.Size(300, 42);
             this.txtPalavraPasse.TabIndex = 81;
             this.txtPalavraPasse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPalavraPasse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPalavraPasse_KeyPress);

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerFaltas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnInserir = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
+            this.txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvFalta = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFalta)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(38, 46);
+            this.label1.Location = new System.Drawing.Point(37, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 29);
             this.label1.TabIndex = 24;
@@ -83,82 +83,82 @@
             this.btnInserir.Text = "Inserir";
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // guna2Button1
+            // btnPesquisar
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(778, 105);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(58, 36);
-            this.guna2Button1.TabIndex = 19;
+            this.btnPesquisar.CheckedState.Parent = this.btnPesquisar;
+            this.btnPesquisar.CustomImages.Parent = this.btnPesquisar;
+            this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.HoverState.Parent = this.btnPesquisar;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(785, 94);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.ShadowDecoration.Parent = this.btnPesquisar;
+            this.btnPesquisar.Size = new System.Drawing.Size(58, 36);
+            this.btnPesquisar.TabIndex = 19;
             // 
-            // guna2TextBox1
+            // txtPesquisar
             // 
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Pesquise pelo nome ou código";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(43, 105);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 28;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(793, 36);
-            this.guna2TextBox1.TabIndex = 18;
+            this.txtPesquisar.BorderThickness = 0;
+            this.txtPesquisar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisar.DefaultText = "Pesquise pelo nome ou código";
+            this.txtPesquisar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPesquisar.DisabledState.Parent = this.txtPesquisar;
+            this.txtPesquisar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPesquisar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPesquisar.FocusedState.Parent = this.txtPesquisar;
+            this.txtPesquisar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPesquisar.HoverState.Parent = this.txtPesquisar;
+            this.txtPesquisar.Location = new System.Drawing.Point(42, 94);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.PasswordChar = '\0';
+            this.txtPesquisar.PlaceholderText = "";
+            this.txtPesquisar.SelectedText = "";
+            this.txtPesquisar.SelectionStart = 28;
+            this.txtPesquisar.ShadowDecoration.Parent = this.txtPesquisar;
+            this.txtPesquisar.Size = new System.Drawing.Size(801, 36);
+            this.txtPesquisar.TabIndex = 18;
             // 
             // dgvFalta
             // 
             this.dgvFalta.AllowUserToAddRows = false;
             this.dgvFalta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvFalta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvFalta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFalta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFalta.BackgroundColor = System.Drawing.Color.White;
             this.dgvFalta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFalta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvFalta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFalta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFalta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFalta.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFalta.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFalta.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFalta.EnableHeadersVisualStyles = false;
             this.dgvFalta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvFalta.Location = new System.Drawing.Point(43, 158);
+            this.dgvFalta.Location = new System.Drawing.Point(42, 149);
             this.dgvFalta.Name = "dgvFalta";
             this.dgvFalta.ReadOnly = true;
             this.dgvFalta.RowHeadersVisible = false;
             this.dgvFalta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFalta.Size = new System.Drawing.Size(793, 398);
+            this.dgvFalta.Size = new System.Drawing.Size(801, 413);
             this.dgvFalta.TabIndex = 17;
             this.dgvFalta.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvFalta.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -192,8 +192,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.dgvFalta);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -214,8 +214,8 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
         private Guna.UI2.WinForms.Guna2Button btnInserir;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button btnPesquisar;
+        private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvFalta;
     }
 }

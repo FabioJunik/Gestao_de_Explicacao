@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(19, 53);
+            this.label1.Location = new System.Drawing.Point(37, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 29);
             this.label1.TabIndex = 24;
@@ -62,7 +62,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(664, 585);
+            this.btnEliminar.Location = new System.Drawing.Point(667, 587);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
             this.btnEliminar.Size = new System.Drawing.Size(175, 40);
@@ -77,7 +77,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.HoverState.Parent = this.btnEditar;
-            this.btnEditar.Location = new System.Drawing.Point(452, 585);
+            this.btnEditar.Location = new System.Drawing.Point(453, 587);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
             this.btnEditar.Size = new System.Drawing.Size(175, 40);
@@ -92,7 +92,7 @@
             this.btnVerMais.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMais.ForeColor = System.Drawing.Color.White;
             this.btnVerMais.HoverState.Parent = this.btnVerMais;
-            this.btnVerMais.Location = new System.Drawing.Point(242, 585);
+            this.btnVerMais.Location = new System.Drawing.Point(242, 587);
             this.btnVerMais.Name = "btnVerMais";
             this.btnVerMais.ShadowDecoration.Parent = this.btnVerMais;
             this.btnVerMais.Size = new System.Drawing.Size(175, 40);
@@ -107,7 +107,7 @@
             this.btnInserir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.Color.White;
             this.btnInserir.HoverState.Parent = this.btnInserir;
-            this.btnInserir.Location = new System.Drawing.Point(35, 585);
+            this.btnInserir.Location = new System.Drawing.Point(42, 587);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.ShadowDecoration.Parent = this.btnInserir;
             this.btnInserir.Size = new System.Drawing.Size(175, 40);
@@ -123,7 +123,7 @@
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
             this.btnPesquisar.HoverState.Parent = this.btnPesquisar;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(780, 116);
+            this.btnPesquisar.Location = new System.Drawing.Point(784, 94);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.ShadowDecoration.Parent = this.btnPesquisar;
             this.btnPesquisar.Size = new System.Drawing.Size(58, 36);
@@ -145,7 +145,7 @@
             this.txtPesquisar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPesquisar.HoverState.Parent = this.txtPesquisar;
-            this.txtPesquisar.Location = new System.Drawing.Point(36, 116);
+            this.txtPesquisar.Location = new System.Drawing.Point(42, 94);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.PasswordChar = '\0';
@@ -188,12 +188,12 @@
             this.dgvProfs.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProfs.EnableHeadersVisualStyles = false;
             this.dgvProfs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvProfs.Location = new System.Drawing.Point(36, 160);
+            this.dgvProfs.Location = new System.Drawing.Point(44, 149);
             this.dgvProfs.Name = "dgvProfs";
             this.dgvProfs.ReadOnly = true;
             this.dgvProfs.RowHeadersVisible = false;
             this.dgvProfs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProfs.Size = new System.Drawing.Size(801, 398);
+            this.dgvProfs.Size = new System.Drawing.Size(801, 413);
             this.dgvProfs.TabIndex = 17;
             this.dgvProfs.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvProfs.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -217,6 +217,7 @@
             this.dgvProfs.ThemeStyle.RowsStyle.Height = 22;
             this.dgvProfs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProfs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvProfs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProfs_CellContentClick);
             // 
             // frmVerProfs
             // 

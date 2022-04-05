@@ -130,12 +130,15 @@ namespace Explicacao
 
         private void txtPesquisar_Enter(object sender, EventArgs e)
         {
-
             if (!click)
             {
                 txtPesquisar.Text = ""; 
                 click = true;
             }
+        }
+
+        private void dgvProfs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

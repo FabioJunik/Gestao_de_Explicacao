@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(30, 51);
+            this.label1.Location = new System.Drawing.Point(37, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 29);
             this.label1.TabIndex = 32;
@@ -123,7 +123,7 @@
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
             this.btnPesquisar.HoverState.Parent = this.btnPesquisar;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(780, 114);
+            this.btnPesquisar.Location = new System.Drawing.Point(785, 94);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.ShadowDecoration.Parent = this.btnPesquisar;
             this.btnPesquisar.Size = new System.Drawing.Size(58, 36);
@@ -145,7 +145,7 @@
             this.txtPesquisar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPesquisar.HoverState.Parent = this.txtPesquisar;
-            this.txtPesquisar.Location = new System.Drawing.Point(36, 114);
+            this.txtPesquisar.Location = new System.Drawing.Point(42, 94);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.PasswordChar = '\0';
@@ -188,12 +188,12 @@
             this.dgvPropina.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPropina.EnableHeadersVisualStyles = false;
             this.dgvPropina.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPropina.Location = new System.Drawing.Point(36, 158);
+            this.dgvPropina.Location = new System.Drawing.Point(42, 149);
             this.dgvPropina.Name = "dgvPropina";
             this.dgvPropina.ReadOnly = true;
             this.dgvPropina.RowHeadersVisible = false;
             this.dgvPropina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPropina.Size = new System.Drawing.Size(801, 398);
+            this.dgvPropina.Size = new System.Drawing.Size(801, 413);
             this.dgvPropina.TabIndex = 25;
             this.dgvPropina.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvPropina.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
