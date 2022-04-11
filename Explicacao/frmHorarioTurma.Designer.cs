@@ -34,19 +34,19 @@
             this.cmbTurmas = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraTitulo
             // 
-            this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
+            this.pnlBarraTitulo.BackColor = System.Drawing.Color.Transparent;
             this.pnlBarraTitulo.Controls.Add(this.btnFechar);
-            this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnlBarraTitulo.Location = new System.Drawing.Point(7, 7);
             this.pnlBarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
-            this.pnlBarraTitulo.Size = new System.Drawing.Size(300, 30);
+            this.pnlBarraTitulo.Size = new System.Drawing.Size(287, 30);
             this.pnlBarraTitulo.TabIndex = 87;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             // 
@@ -54,7 +54,7 @@
             // 
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(270, 6);
+            this.btnFechar.Location = new System.Drawing.Point(267, 6);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(18, 18);
@@ -92,10 +92,10 @@
             this.btnSalvar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.HoverState.Parent = this.btnSalvar;
-            this.btnSalvar.Location = new System.Drawing.Point(63, 148);
+            this.btnSalvar.Location = new System.Drawing.Point(16, 148);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.ShadowDecoration.Parent = this.btnSalvar;
-            this.btnSalvar.Size = new System.Drawing.Size(175, 40);
+            this.btnSalvar.Size = new System.Drawing.Size(272, 40);
             this.btnSalvar.TabIndex = 142;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -109,6 +109,25 @@
             this.label4.TabIndex = 141;
             this.label4.Text = "Turmas";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Enabled = false;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(1, 1);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(298, 198);
+            this.guna2Button1.TabIndex = 161;
+            // 
             // frmHorarioTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -119,6 +138,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pnlBarraTitulo);
+            this.Controls.Add(this.guna2Button1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -141,5 +161,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbTurmas;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
