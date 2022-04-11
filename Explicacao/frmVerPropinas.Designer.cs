@@ -34,12 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.btnVerMais = new Guna.UI2.WinForms.Guna2Button();
             this.btnInserir = new Guna.UI2.WinForms.Guna2Button();
             this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
             this.txtPesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvPropina = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblTurma = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropina)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(37, 41);
+            this.label1.Location = new System.Drawing.Point(37, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 29);
             this.label1.TabIndex = 32;
@@ -62,28 +65,13 @@
             this.btnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(664, 583);
+            this.btnEliminar.Location = new System.Drawing.Point(550, 589);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
             this.btnEliminar.Size = new System.Drawing.Size(175, 40);
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.CheckedState.Parent = this.btnEditar;
-            this.btnEditar.CustomImages.Parent = this.btnEditar;
-            this.btnEditar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.HoverState.Parent = this.btnEditar;
-            this.btnEditar.Location = new System.Drawing.Point(452, 583);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
-            this.btnEditar.Size = new System.Drawing.Size(175, 40);
-            this.btnEditar.TabIndex = 30;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnVerMais
             // 
@@ -92,12 +80,12 @@
             this.btnVerMais.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMais.ForeColor = System.Drawing.Color.White;
             this.btnVerMais.HoverState.Parent = this.btnVerMais;
-            this.btnVerMais.Location = new System.Drawing.Point(242, 583);
+            this.btnVerMais.Location = new System.Drawing.Point(354, 589);
             this.btnVerMais.Name = "btnVerMais";
             this.btnVerMais.ShadowDecoration.Parent = this.btnVerMais;
             this.btnVerMais.Size = new System.Drawing.Size(175, 40);
             this.btnVerMais.TabIndex = 29;
-            this.btnVerMais.Text = "Ver mais";
+            this.btnVerMais.Text = "Editar";
             this.btnVerMais.Click += new System.EventHandler(this.btnVerMais_Click);
             // 
             // btnInserir
@@ -107,7 +95,7 @@
             this.btnInserir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.Color.White;
             this.btnInserir.HoverState.Parent = this.btnInserir;
-            this.btnInserir.Location = new System.Drawing.Point(35, 583);
+            this.btnInserir.Location = new System.Drawing.Point(159, 589);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.ShadowDecoration.Parent = this.btnInserir;
             this.btnInserir.Size = new System.Drawing.Size(175, 40);
@@ -123,7 +111,7 @@
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
             this.btnPesquisar.HoverState.Parent = this.btnPesquisar;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(785, 94);
+            this.btnPesquisar.Location = new System.Drawing.Point(785, 144);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.ShadowDecoration.Parent = this.btnPesquisar;
             this.btnPesquisar.Size = new System.Drawing.Size(58, 36);
@@ -145,7 +133,7 @@
             this.txtPesquisar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPesquisar.HoverState.Parent = this.txtPesquisar;
-            this.txtPesquisar.Location = new System.Drawing.Point(42, 94);
+            this.txtPesquisar.Location = new System.Drawing.Point(42, 144);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.PasswordChar = '\0';
@@ -188,12 +176,12 @@
             this.dgvPropina.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPropina.EnableHeadersVisualStyles = false;
             this.dgvPropina.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPropina.Location = new System.Drawing.Point(42, 149);
+            this.dgvPropina.Location = new System.Drawing.Point(42, 188);
             this.dgvPropina.Name = "dgvPropina";
             this.dgvPropina.ReadOnly = true;
             this.dgvPropina.RowHeadersVisible = false;
             this.dgvPropina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPropina.Size = new System.Drawing.Size(801, 413);
+            this.dgvPropina.Size = new System.Drawing.Size(801, 374);
             this.dgvPropina.TabIndex = 25;
             this.dgvPropina.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvPropina.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -218,15 +206,62 @@
             this.dgvPropina.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPropina.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(38, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Nome :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(38, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 22);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Turma : ";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNome.Location = new System.Drawing.Point(106, 75);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(245, 22);
+            this.lblNome.TabIndex = 35;
+            this.lblNome.Text = "Fábio madaleno simao dos santos";
+            // 
+            // lblTurma
+            // 
+            this.lblTurma.AutoSize = true;
+            this.lblTurma.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTurma.Location = new System.Drawing.Point(106, 109);
+            this.lblTurma.Name = "lblTurma";
+            this.lblTurma.Size = new System.Drawing.Size(43, 22);
+            this.lblTurma.TabIndex = 36;
+            this.lblTurma.Text = "II12B";
+            // 
             // frmVerPropinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(885, 650);
+            this.Controls.Add(this.lblTurma);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnVerMais);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnPesquisar);
@@ -249,11 +284,14 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
-        private Guna.UI2.WinForms.Guna2Button btnEditar;
         private Guna.UI2.WinForms.Guna2Button btnVerMais;
         private Guna.UI2.WinForms.Guna2Button btnInserir;
         private Guna.UI2.WinForms.Guna2Button btnPesquisar;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPropina;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblTurma;
     }
 }

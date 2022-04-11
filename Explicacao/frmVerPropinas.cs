@@ -14,15 +14,22 @@ namespace Explicacao
     public partial class frmVerPropinas : Form
     {
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
+        MySqlConnection conexao;
         principal principal = new principal();
         Panel painel;
 
+        int codAluno;
+        int codTurma;
         bool click;
 
-        public frmVerPropinas(Panel pnl)
+        public frmVerPropinas(Panel pnl, int codAluno, int codTurma)
         {
             InitializeComponent();
             painel = pnl;
+            this.codAluno = codAluno;
+            this.codTurma = codTurma;
+            conexao = dbAuxiliar.buscarConexao();
+
         }
 
         private void frmVerPropinas_Load(object sender, EventArgs e)
@@ -32,6 +39,18 @@ namespace Explicacao
 
         private void mostrar()
         {
+            conexao.Open();
+            MySqlCommand comando = new MySqlCommand("SELECT nome FROM tbTurma WHERE codTurma = @codTurma;",conexao);
+            comando.Parameters.Add("@codTurma", MySqlDbType.Int32).Value = codTurma;
+            comando.Parameters.Add("@codAluno", MySqlDbType.Int32).Value = codAluno;
+
+            lblTurma.Text = Convert.ToString(comando.ExecuteScalar());
+
+            comando.CommandText = "SELECT nome FROM tbAluno WHERE codAluno = @codAluno;";
+            lblNome.Text = Convert.ToString(comando.ExecuteScalar());
+
+            conexao.Close();
+
             string query = "SELECT codPropina AS 'Código', dataPagamento AS 'Data', quantMeses AS 'Quantidade de meses', " +
                            "valor AS 'Valor pago' FROM tbPropina;";
 
@@ -53,7 +72,7 @@ namespace Explicacao
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            principal.AbrirFormulario(new frmAdicionarPropina(painel), painel);
+            //principal.AbrirFormulario(new frmAdicionarPropina(painel), painel);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
