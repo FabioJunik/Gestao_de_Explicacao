@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
-
+using System.Drawing.Configuration;
 namespace Explicacao
 {
     public partial class frmPrincipal : Form
@@ -20,7 +20,7 @@ namespace Explicacao
         public frmPrincipal()
         {
             InitializeComponent();
-
+            
             if (dbAuxiliar.RetornarSolocitacaoPalavraPasse() == "1") {
                 frmEntrar frm = new frmEntrar();
                 frm.ShowDialog();
@@ -55,6 +55,13 @@ namespace Explicacao
         private void btnPainelControle_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmPainelControle(pnlPrincipal), pnlPrincipal);
+            dismarcarBotao(Controls);
+            {
+                btnPainelControle.FillColor = Color.FromArgb(32, 108, 202);
+                btnAluno.FillColor = Color.FromArgb(94, 155, 230);
+                btnProf.FillColor = Color.FromArgb(94, 155, 230);
+                btnTurma.FillColor = Color.FromArgb(94, 155, 230);
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -65,16 +72,38 @@ namespace Explicacao
         private void btnAluno_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmVerAlunos(pnlPrincipal), pnlPrincipal);
+            //dismarcarBotao(Controls);
+            {
+                btnAluno.FillColor = Color.FromArgb(32, 108, 202);
+                btnPainelControle.FillColor = Color.FromArgb(94, 155, 230); ;
+                btnProf.FillColor = Color.FromArgb(94, 155, 230);
+                btnTurma.FillColor = Color.FromArgb(94, 155, 230);
+            }
+
         }
 
         private void btnTurma_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmVerTurmas(pnlPrincipal), pnlPrincipal);
+            {
+                btnTurma.FillColor = Color.FromArgb(32, 108, 202);
+                btnAluno.FillColor = Color.FromArgb(94, 155, 230);
+                btnPainelControle.FillColor = Color.FromArgb(94, 155, 230); ;
+                btnProf.FillColor = Color.FromArgb(94, 155, 230);
+            }
+
         }
 
         private void btnProfs_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmVerProfs(pnlPrincipal), pnlPrincipal);
+            {
+                btnProf.FillColor = Color.FromArgb(32, 108, 202);
+                btnAluno.FillColor = Color.FromArgb(94, 155, 230);
+                btnPainelControle.FillColor = Color.FromArgb(94, 155, 230); ;
+                btnTurma.FillColor = Color.FromArgb(94, 155, 230);
+            }
+
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -98,7 +127,19 @@ namespace Explicacao
 
         private void btnPropina_Click(object sender, EventArgs e)
         {
-            principal.AbrirFormulario(new frmVerPropinas(pnlPrincipal), pnlPrincipal);
+            //principal.AbrirFormulario(new frmVerPropinas(pnlPrincipal), pnlPrincipal);
+        }
+
+        private void dismarcarBotao(Control.ControlCollection controls)
+        {
+            foreach (Control controle in controls)
+            {
+                if (controle is Guna.UI2.WinForms.Guna2Button)
+                {
+                    MessageBox.Show("Entrou");
+                    ((Guna.UI2.WinForms.Guna2Button)(controle)).FillColor = Color.FromArgb(94, 155, 230);
+                }
+            }
         }
     }
 }

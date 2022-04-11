@@ -35,8 +35,6 @@
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnPropina = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnConfiguracoes = new Guna.UI2.WinForms.Guna2Button();
             this.lblNomeExplicacao = new System.Windows.Forms.Label();
             this.btnTurma = new Guna.UI2.WinForms.Guna2Button();
@@ -53,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,12 +75,13 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(43, 5);
+            this.lblTitulo.Location = new System.Drawing.Point(42, 6);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(128, 22);
+            this.lblTitulo.Size = new System.Drawing.Size(199, 18);
             this.lblTitulo.TabIndex = 4;
-            this.lblTitulo.Text = "Gerir Explicação";
+            this.lblTitulo.Text = "Sistema de gestão de explicação";
             // 
             // btnMinimizar
             // 
@@ -99,10 +97,12 @@
             // 
             // picIcon
             // 
-            this.picIcon.Location = new System.Drawing.Point(9, 4);
+            this.picIcon.Image = ((System.Drawing.Image)(resources.GetObject("picIcon.Image")));
+            this.picIcon.Location = new System.Drawing.Point(9, 5);
             this.picIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(27, 24);
+            this.picIcon.Size = new System.Drawing.Size(20, 20);
+            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picIcon.TabIndex = 1;
             this.picIcon.TabStop = false;
             // 
@@ -122,8 +122,6 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
-            this.pnlMenu.Controls.Add(this.btnPropina);
-            this.pnlMenu.Controls.Add(this.pictureBox6);
             this.pnlMenu.Controls.Add(this.btnConfiguracoes);
             this.pnlMenu.Controls.Add(this.lblNomeExplicacao);
             this.pnlMenu.Controls.Add(this.btnTurma);
@@ -140,36 +138,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(265, 650);
             this.pnlMenu.TabIndex = 1;
-            // 
-            // btnPropina
-            // 
-            this.btnPropina.CheckedState.Parent = this.btnPropina;
-            this.btnPropina.CustomImages.Parent = this.btnPropina;
-            this.btnPropina.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
-            this.btnPropina.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPropina.ForeColor = System.Drawing.Color.White;
-            this.btnPropina.HoverState.Parent = this.btnPropina;
-            this.btnPropina.Image = ((System.Drawing.Image)(resources.GetObject("btnPropina.Image")));
-            this.btnPropina.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPropina.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPropina.Location = new System.Drawing.Point(6, 352);
-            this.btnPropina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
-            this.btnPropina.Name = "btnPropina";
-            this.btnPropina.ShadowDecoration.Parent = this.btnPropina;
-            this.btnPropina.Size = new System.Drawing.Size(260, 35);
-            this.btnPropina.TabIndex = 17;
-            this.btnPropina.Text = "Propina";
-            this.btnPropina.Click += new System.EventHandler(this.btnPropina_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.Location = new System.Drawing.Point(1, 352);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(4, 35);
-            this.pictureBox6.TabIndex = 16;
-            this.pictureBox6.TabStop = false;
             // 
             // btnConfiguracoes
             // 
@@ -195,7 +163,7 @@
             // 
             this.lblNomeExplicacao.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeExplicacao.ForeColor = System.Drawing.Color.White;
-            this.lblNomeExplicacao.Location = new System.Drawing.Point(-1, 24);
+            this.lblNomeExplicacao.Location = new System.Drawing.Point(-1, 38);
             this.lblNomeExplicacao.Name = "lblNomeExplicacao";
             this.lblNomeExplicacao.Size = new System.Drawing.Size(263, 63);
             this.lblNomeExplicacao.TabIndex = 13;
@@ -213,7 +181,7 @@
             this.btnTurma.Image = ((System.Drawing.Image)(resources.GetObject("btnTurma.Image")));
             this.btnTurma.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTurma.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnTurma.Location = new System.Drawing.Point(6, 295);
+            this.btnTurma.Location = new System.Drawing.Point(6, 310);
             this.btnTurma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
             this.btnTurma.Name = "btnTurma";
             this.btnTurma.ShadowDecoration.Parent = this.btnTurma;
@@ -225,7 +193,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Location = new System.Drawing.Point(1, 295);
+            this.pictureBox3.Location = new System.Drawing.Point(1, 310);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(4, 35);
@@ -243,7 +211,7 @@
             this.btnProf.Image = ((System.Drawing.Image)(resources.GetObject("btnProf.Image")));
             this.btnProf.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProf.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnProf.Location = new System.Drawing.Point(6, 246);
+            this.btnProf.Location = new System.Drawing.Point(6, 256);
             this.btnProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
             this.btnProf.Name = "btnProf";
             this.btnProf.ShadowDecoration.Parent = this.btnProf;
@@ -255,7 +223,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Location = new System.Drawing.Point(1, 246);
+            this.pictureBox4.Location = new System.Drawing.Point(1, 256);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(4, 35);
@@ -273,7 +241,7 @@
             this.btnAluno.Image = ((System.Drawing.Image)(resources.GetObject("btnAluno.Image")));
             this.btnAluno.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAluno.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAluno.Location = new System.Drawing.Point(5, 196);
+            this.btnAluno.Location = new System.Drawing.Point(5, 201);
             this.btnAluno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
             this.btnAluno.Name = "btnAluno";
             this.btnAluno.ShadowDecoration.Parent = this.btnAluno;
@@ -285,7 +253,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(1, 196);
+            this.pictureBox2.Location = new System.Drawing.Point(1, 201);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(4, 35);
@@ -356,7 +324,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -384,8 +351,6 @@
         private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Label lblNomeExplicacao;
         private Guna.UI2.WinForms.Guna2Button btnConfiguracoes;
-        private Guna.UI2.WinForms.Guna2Button btnPropina;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 
