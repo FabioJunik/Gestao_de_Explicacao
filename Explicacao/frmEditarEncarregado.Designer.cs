@@ -41,6 +41,7 @@
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
@@ -192,27 +193,46 @@
             // 
             // pnlBarraTitulo
             // 
-            this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
+            this.pnlBarraTitulo.BackColor = System.Drawing.Color.Transparent;
             this.pnlBarraTitulo.Controls.Add(this.btnFechar);
-            this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnlBarraTitulo.Location = new System.Drawing.Point(7, 7);
             this.pnlBarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
-            this.pnlBarraTitulo.Size = new System.Drawing.Size(494, 30);
-            this.pnlBarraTitulo.TabIndex = 110;
+            this.pnlBarraTitulo.Size = new System.Drawing.Size(482, 30);
+            this.pnlBarraTitulo.TabIndex = 112;
+            this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             // 
             // btnFechar
             // 
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(464, 6);
+            this.btnFechar.Location = new System.Drawing.Point(460, 3);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(18, 18);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 1;
             this.btnFechar.TabStop = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Enabled = false;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(1, 1);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(492, 466);
+            this.guna2Button1.TabIndex = 163;
             // 
             // frmEditarEncarregado
             // 
@@ -231,6 +251,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.guna2Button1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -258,5 +279,6 @@
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private System.Windows.Forms.Panel pnlBarraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
