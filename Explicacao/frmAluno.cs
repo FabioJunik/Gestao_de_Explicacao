@@ -42,12 +42,12 @@ namespace Explicacao
         {
             nome = txtNome.Text;
             email = txtEmail.Text;
-            municipio = txtMunicipio.Text;
-            bairro = txtBairro.Text;
-            rua = txtRua.Text;
             telefones = txtTelefone.Text;
             dataNasc = dtpDataNasc.Value.ToString("yyyy-MM-dd");
             sexo = rdFemenino.Checked ? "F" : "M";
+            municipio = txtMunicipio.Text;
+            bairro = txtBairro.Text;
+            rua = txtRua.Text;
 
             string query = "UPDATE tbAluno SET " +
                             "nome = @nome, dataNasc = @dataNasc, sexo = @sexo, email = @email " + 
@@ -78,7 +78,7 @@ namespace Explicacao
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (!principal.Confirmacao("O aluno será apagado permanentemente. Deseja continuar?", "APGAR ALUNO"))
+            if (!principal.Confirmacao("O aluno será apagado permanentemente. Deseja continuar?", "APAGAR ALUNO"))
                 return;
 
             conexao.Open();
@@ -100,8 +100,34 @@ namespace Explicacao
             comando.Dispose();
             conexao.Close();
 
-            principal.Aviso("Dados inseridos com sucesso!");
             principal.AbrirFormulario(new frmVerAlunos(painel), painel);
+            principal.Aviso("Dados apagados com sucesso!");
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            principal.ApenasTexto(e);
+        }
+
+        private void txtMunicipio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            principal.ApenasTexto(e);
+        }
+
+        private void guna2VSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNota_Click(object sender, EventArgs e)
+        {
+            principal.AbrirFormulario(new frmNota(painel), painel);
+        }
+
+        private void btnPropina_Click(object sender, EventArgs e)
+        {
+            int codTurma = Convert.ToInt32(dgvTurma.CurrentRow.Cells[0].Value);
+            principal.AbrirFormulario(new frmVerPropinas(painel, codAluno,codTurma), painel);
         }
 
         private void mostrarDados()
@@ -139,6 +165,13 @@ namespace Explicacao
             rdMasculino.Checked = true;
             rdFemenino.Checked = sexo == "F" ? true : false;
             rdMasculino.Checked = sexo == "M" ? true : false;
+
+
+            query = "SELECT codTurma AS 'Codigo', nome AS 'Nome', dataInicio AS 'Data Inicio' " +
+                    "FROM tbAluno_Turma INNER JOIN tbTurma on codTurma = cod_turma " +
+                    $"WHERE cod_aluno = {codAluno};";
+
+            dgvTurma.DataSource = dbAuxiliar.ApresentarResultados(query);
 
         }
 
