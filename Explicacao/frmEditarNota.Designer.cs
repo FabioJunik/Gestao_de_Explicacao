@@ -65,6 +65,7 @@
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 1;
             this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnCancelar
             // 
@@ -80,6 +81,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(163, 40);
             this.btnCancelar.TabIndex = 121;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 

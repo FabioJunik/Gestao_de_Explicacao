@@ -13,14 +13,12 @@ namespace Explicacao
 {
     public partial class frmEditarNota : Form
     {
-        Panel painel;
         int codAluno;
         int codTurma;
 
-        public frmEditarNota(Panel pnl, int codAluno, int codTurma)
+        public frmEditarNota(int codAluno, int codTurma)
         {
             InitializeComponent();
-            painel = pnl;
             this.codAluno = codAluno;
             this.codTurma = codTurma;
         }
@@ -34,6 +32,16 @@ namespace Explicacao
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
