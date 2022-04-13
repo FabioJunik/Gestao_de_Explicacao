@@ -113,5 +113,10 @@ namespace Explicacao
 
             dgvTurmas.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
+
+        private void btnVerHorario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

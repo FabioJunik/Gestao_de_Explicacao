@@ -42,8 +42,14 @@ namespace Explicacao
         private void btnInserir_Click(object sender, EventArgs e)
         {
             string dia = "";
+            int familia;
             conexao.Open();
-            comando = new MySqlCommand("INSERT INTO tbhorario VALUES(null, @diaSemana, @horaInicio, @horaFim)", conexao);
+
+            comando = new MySqlCommand("SELECT MAX(familia) FROM tbHorario", conexao);
+            familia = Convert.ToInt32(comando.ExecuteScalar());
+
+
+            comando.CommandText = "INSERT INTO tbhorario VALUES(null, @diaSemana, @horaInicio, @horaFim)";
 
             foreach (Control controle in this.Controls) 
                 if (controle is Guna.UI2.WinForms.Guna2CheckBox) 
@@ -58,6 +64,7 @@ namespace Explicacao
                         comando.ExecuteNonQuery();
                     }
 
+            comando.Dispose();
             conexao.Close();
 
             principal.LimparCampos(this.Controls);

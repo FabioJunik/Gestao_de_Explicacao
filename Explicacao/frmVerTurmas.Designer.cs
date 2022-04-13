@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnVerHorario = new Guna.UI2.WinForms.Guna2Button();
             this.btnVerMais = new Guna.UI2.WinForms.Guna2Button();
             this.btnInserir = new Guna.UI2.WinForms.Guna2Button();
             this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
@@ -70,19 +70,20 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // guna2Button4
+            // btnVerHorario
             // 
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(456, 587);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(175, 40);
-            this.guna2Button4.TabIndex = 22;
-            this.guna2Button4.Text = "Ver horário";
+            this.btnVerHorario.CheckedState.Parent = this.btnVerHorario;
+            this.btnVerHorario.CustomImages.Parent = this.btnVerHorario;
+            this.btnVerHorario.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerHorario.ForeColor = System.Drawing.Color.White;
+            this.btnVerHorario.HoverState.Parent = this.btnVerHorario;
+            this.btnVerHorario.Location = new System.Drawing.Point(456, 587);
+            this.btnVerHorario.Name = "btnVerHorario";
+            this.btnVerHorario.ShadowDecoration.Parent = this.btnVerHorario;
+            this.btnVerHorario.Size = new System.Drawing.Size(175, 40);
+            this.btnVerHorario.TabIndex = 22;
+            this.btnVerHorario.Text = "Ver horário";
+            this.btnVerHorario.Click += new System.EventHandler(this.btnVerHorario_Click);
             // 
             // btnVerMais
             // 
@@ -225,7 +226,7 @@
             this.ClientSize = new System.Drawing.Size(885, 650);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.btnVerHorario);
             this.Controls.Add(this.btnVerMais);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnPesquisar);
@@ -247,7 +248,7 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnVerHorario;
         private Guna.UI2.WinForms.Guna2Button btnVerMais;
         private Guna.UI2.WinForms.Guna2Button btnInserir;
         private Guna.UI2.WinForms.Guna2Button btnPesquisar;
