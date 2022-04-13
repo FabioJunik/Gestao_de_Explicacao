@@ -51,17 +51,24 @@ namespace Explicacao
                 e.Handled = true; 
         }
 
-        public void ApenasTexto(KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar == '\0')
-                e.Handled = true;
-        }
-
         public void ApenasNumero(KeyPressEventArgs e, bool validar)
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ',')
                 e.Handled = true;
         }
+
+        public void ApenasNumero(KeyPressEventArgs e, char separador='/')
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '/')
+                e.Handled = true;
+        }
+
+        public void ApenasTexto(KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
 
         public void LimparCampos(Control.ControlCollection controls)
         {

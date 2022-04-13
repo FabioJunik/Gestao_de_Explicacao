@@ -125,5 +125,10 @@ namespace Explicacao
         {
             pesquisar();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            principal.AbrirFormulario(new frmAluno(painel, codAluno), painel);
+        }
     }
 }

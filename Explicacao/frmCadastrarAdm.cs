@@ -36,6 +36,11 @@ namespace Explicacao
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         private void frmLogin00_Load(object sender, EventArgs e)
         {
@@ -49,6 +54,11 @@ namespace Explicacao
         {
             if (++ocorrencia == 1)
                 this.Close();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

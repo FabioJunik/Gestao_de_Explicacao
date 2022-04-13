@@ -190,6 +190,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(163, 40);
             this.btnCancelar.TabIndex = 109;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pnlBarraTitulo
             // 

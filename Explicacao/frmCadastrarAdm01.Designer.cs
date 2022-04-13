@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarAdm01));
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtNomeAdm = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNomeExplicacao = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPalavraPasse = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ckbVer = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnProximo = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,15 +56,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Crie sua explicação";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 22);
-            this.label4.TabIndex = 82;
-            this.label4.Text = "Nome do Adiministrador";
             // 
             // txtNomeAdm
             // 
@@ -133,15 +129,6 @@
             this.txtPalavraPasse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPalavraPasse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPalavraPasse_KeyPress);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 22);
-            this.label3.TabIndex = 82;
-            this.label3.Text = "Palavra-passe";
-            // 
             // ckbVer
             // 
             this.ckbVer.AutoSize = true;
@@ -192,11 +179,51 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(56, 164);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 114;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(55, 265);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 115;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 22);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "Nome do Adiministrador";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 22);
+            this.label3.TabIndex = 82;
+            this.label3.Text = "Palavra-passe";
+            // 
             // frmCadastrarAdm01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 500);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnProximo);
             this.Controls.Add(this.ckbVer);
@@ -213,6 +240,8 @@
             this.Name = "frmCadastrarAdm01";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin01";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,14 +250,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNomeExplicacao;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPalavraPasse;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CheckBox ckbVer;
         private Guna.UI2.WinForms.Guna2Button btnProximo;
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNomeAdm;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

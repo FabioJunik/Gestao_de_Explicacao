@@ -150,11 +150,11 @@
             this.btnConfiguracoes.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracoes.Image")));
             this.btnConfiguracoes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnConfiguracoes.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnConfiguracoes.Location = new System.Drawing.Point(-7, 572);
+            this.btnConfiguracoes.Location = new System.Drawing.Point(1, 572);
             this.btnConfiguracoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
             this.btnConfiguracoes.Name = "btnConfiguracoes";
             this.btnConfiguracoes.ShadowDecoration.Parent = this.btnConfiguracoes;
-            this.btnConfiguracoes.Size = new System.Drawing.Size(272, 35);
+            this.btnConfiguracoes.Size = new System.Drawing.Size(261, 35);
             this.btnConfiguracoes.TabIndex = 15;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);

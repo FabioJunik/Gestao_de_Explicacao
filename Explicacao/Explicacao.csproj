@@ -112,6 +112,12 @@
     <Compile Include="frmEditarEncarregado.Designer.cs">
       <DependentUpon>frmEditarEncarregado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditarNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarNota.Designer.cs">
+      <DependentUpon>frmEditarNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHorarioTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,11 +184,11 @@
     <Compile Include="frmHorario.Designer.cs">
       <DependentUpon>frmHorario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInserirNota.cs">
+    <Compile Include="frmAdicionarNota.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInserirNota.Designer.cs">
-      <DependentUpon>frmInserirNota.cs</DependentUpon>
+    <Compile Include="frmAdicionarNota.Designer.cs">
+      <DependentUpon>frmAdicionarNota.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadastrarAdm.cs">
       <SubType>Form</SubType>
@@ -208,11 +214,11 @@
     <Compile Include="frmNivel.Designer.cs">
       <DependentUpon>frmNivel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNota.cs">
+    <Compile Include="frmVerNota.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNota.Designer.cs">
-      <DependentUpon>frmNota.cs</DependentUpon>
+    <Compile Include="frmVerNota.Designer.cs">
+      <DependentUpon>frmVerNota.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProf.cs">
       <SubType>Form</SubType>
@@ -295,6 +301,9 @@
     <EmbeddedResource Include="frmEditarEncarregado.resx">
       <DependentUpon>frmEditarEncarregado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarNota.resx">
+      <DependentUpon>frmEditarNota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHorarioTurma.resx">
       <DependentUpon>frmHorarioTurma.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,8 +337,8 @@
     <EmbeddedResource Include="frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInserirNota.resx">
-      <DependentUpon>frmInserirNota.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdicionarNota.resx">
+      <DependentUpon>frmAdicionarNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastrarAdm.resx">
       <DependentUpon>frmCadastrarAdm.cs</DependentUpon>
@@ -343,8 +352,8 @@
     <EmbeddedResource Include="frmNivel.resx">
       <DependentUpon>frmNivel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNota.resx">
-      <DependentUpon>frmNota.cs</DependentUpon>
+    <EmbeddedResource Include="frmVerNota.resx">
+      <DependentUpon>frmVerNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProf.resx">
       <DependentUpon>frmProf.cs</DependentUpon>

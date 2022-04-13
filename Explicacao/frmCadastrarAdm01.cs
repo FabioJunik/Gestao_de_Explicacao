@@ -37,9 +37,7 @@ namespace Explicacao
         private void btnProximo_Click(object sender, EventArgs e)
         {
             if (txtNomeAdm.Text == "" || txtNomeExplicacao.Text == "" || txtPalavraPasse.Text == "")
-            {
-                MessageBox.Show("Porfavor preencha todos os campos.");
-            }
+                principal.Aviso("Porfavor preencha todos os campos.");
             else
             {
                 string[] dados = new string[3] { txtNomeAdm.Text, txtPalavraPasse.Text, txtNomeExplicacao.Text };

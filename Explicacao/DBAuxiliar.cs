@@ -186,10 +186,8 @@ namespace Explicacao
 
             if (numEntidade == 2)
                 miniQuery = $"cod_Aluno = {cod};";
-
             else
                 miniQuery = $"cod_prof = {cod};";
-
 
             comando = new MySqlCommand($"SELECT municipio FROM tbEndereco WHERE {miniQuery}", conexao);
             string municipio = Convert.ToString(comando.ExecuteScalar());

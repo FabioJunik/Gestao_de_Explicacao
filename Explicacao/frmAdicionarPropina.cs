@@ -18,44 +18,21 @@ namespace Explicacao
         MySqlConnection conexao;
         principal principal = new principal();
         MySqlCommand comando;
-        public frmAdicionarPropina(Panel pnl)
+
+        int codAluno;
+        int codTurma;
+
+        public frmAdicionarPropina(Panel pnl, int codAluno, int codTurma)
         {
             InitializeComponent();
+            this.codAluno = codAluno;
+            this.codTurma = codTurma;
             painel = pnl;
             conexao = dbAuxiliar.buscarConexao();
         }
 
         private void frmAdicionarPropina_Load(object sender, EventArgs e)
         {
-            string query = "";
-            string queryContagem = "";
-            string[] registos;
-
-            //query = "SELECT codAluno, nome FROM tbAluno INNER JOIN tbAluno_Turma ON codAluno = cod_Aluno;";
-            query = "SELECT codAluno, nome FROM tbAluno;";
-            queryContagem = "SELECT COUNT(*) FROM tbAluno;";
-            registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
-            cmbAlunos.Items.AddRange(registos);
-
-            if (cmbAlunos.Items.Count == 0) {
-                principal.Aviso("Não existema lunos registados. Impossível concluir esta operação.");
-                return;
-            }
-
-            cmbAlunos.Text = cmbAlunos.Items[0].ToString();
-
-            query = "SELECT codTurma, nome FROM tbTurma;";
-            queryContagem = "SELECT COUNT(*) FROM tbTurma;";
-            registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
-            cmbTurmas.Items.AddRange(registos);
-            cmbTurmas.Text = cmbTurmas.Items[0].ToString();
-
-            mostrar();
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            principal.AbrirFormulario(new frmVerPropinas(painel), painel);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -66,8 +43,6 @@ namespace Explicacao
         private void btnInserir_Click(object sender, EventArgs e)
         {
             int codAlunoTurma = 0;
-            int codAluno = int.Parse(cmbAlunos.Text.Substring(0, cmbAlunos.Text.IndexOf(" ")));
-            int codTurma = int.Parse(cmbTurmas.Text.Substring(0, cmbTurmas.Text.IndexOf(" ")));
             string dataPagamento = DateTime.Now.ToString("yyyy-MM-dd");
             
             try
@@ -94,7 +69,6 @@ namespace Explicacao
 
                 comando.Dispose();
                 conexao.Close();
-                mostrar();
                 principal.Aviso("Dados inseridos com sucesso!");
             }
             catch (Exception ex) {
@@ -112,7 +86,6 @@ namespace Explicacao
             {
                 float valor;
                 int quantMeses = int.Parse(txtQuantMeses.Text);
-                int codTurma = int.Parse(cmbTurmas.Text.Substring(0, cmbTurmas.Text.IndexOf(" ")));
 
                 conexao.Open();
                 comando = new MySqlCommand("SELECT preco FROM tbTurma WHERE codTurma = @codTurma", conexao);
@@ -131,15 +104,6 @@ namespace Explicacao
             }
         }
 
-        private void mostrar()
-        {
-            string query = "SELECT codPropina AS 'Código', dataPagamento AS 'Data', quantMeses AS 'Quantidade de meses', " +
-                           "valor AS 'Valor pago' FROM tbPropina;";
-
-            dgvPropina.DataSource = dbAuxiliar.ApresentarResultados(query);
-
-            dgvPropina.Columns[0].Width = 75;
-        }
 
         private void cmbTurmas_SelectedIndexChanged(object sender, EventArgs e)
         {

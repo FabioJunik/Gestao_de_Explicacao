@@ -174,13 +174,13 @@ namespace Explicacao
             codProf = Convert.ToInt32(comando.ExecuteScalar());
 
             comando.CommandText = $"SELECT nome FROM tbProfessor WHERE codProf = {codProf}";
-            cmbProfessor.Text = comando.ExecuteScalar().ToString();
+            cmbProfessor.Text = Convert.ToString(comando.ExecuteScalar());
 
             comando.CommandText = $"SELECT nivel FROM tbNivel WHERE codNivel = {codNivel}";
-            cmbNivel.Text = comando.ExecuteScalar().ToString();
+            cmbNivel.Text = Convert.ToString(comando.ExecuteScalar());
 
-            comando.CommandText = $"SELECT numero FROM tbSala WHERE codSala = {codSala}";
-            cmbSala.Text = comando.ExecuteScalar().ToString();
+            //comando.CommandText = $"SELECT numero FROM tbSala WHERE codSala = {codSala}";
+            //cmbSala.Text = comando.ExecuteScalar().ToString();
 
             comando.Dispose();
             conexao.Close();
@@ -192,8 +192,6 @@ namespace Explicacao
             txtQuantProvas.Text = quantProva;
             dtpDataInicio.Text = dataInicio;
             dtpDataFim.Text = dataFim;
-
-            
         }
     }
 }

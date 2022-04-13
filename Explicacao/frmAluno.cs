@@ -121,7 +121,8 @@ namespace Explicacao
 
         private void btnNota_Click(object sender, EventArgs e)
         {
-            principal.AbrirFormulario(new frmNota(painel), painel);
+            int codTurma = Convert.ToInt32(dgvTurma.CurrentRow.Cells[0].Value);
+            principal.AbrirFormulario(new frmVerNota(painel,codAluno,codTurma), painel);
         }
 
         private void btnPropina_Click(object sender, EventArgs e)
