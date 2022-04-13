@@ -214,6 +214,12 @@
     <Compile Include="frmNivel.Designer.cs">
       <DependentUpon>frmNivel.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerHoraioTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerHoraioTurma.Designer.cs">
+      <DependentUpon>frmVerHoraioTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVerNota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNivel.resx">
       <DependentUpon>frmNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerHoraioTurma.resx">
+      <DependentUpon>frmVerHoraioTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerNota.resx">
       <DependentUpon>frmVerNota.cs</DependentUpon>

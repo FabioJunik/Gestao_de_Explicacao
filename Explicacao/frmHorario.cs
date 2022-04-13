@@ -79,8 +79,15 @@ namespace Explicacao
 
         private void btnAdicionarTurma_Click(object sender, EventArgs e)
         {
+            if (dgvHorarios.Rows.Count == 0)
+            {
+                principal.Aviso("Não há alunos registados. Impossível continuar operação.");
+                return;
+            }
+
             int codHorario = Convert.ToInt32(dgvHorarios.CurrentRow.Cells[0].Value);
-            frmHorarioTurma frm = new frmHorarioTurma(codHorario);
+            int familia = Convert.ToInt32(dgvHorarios.CurrentRow.Cells[1].Value);
+            frmHorarioTurma frm = new frmHorarioTurma(codHorario, familia);
             frm.ShowDialog();
         }
 
@@ -115,7 +122,7 @@ namespace Explicacao
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            pesquisar();
         }
 
         private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)

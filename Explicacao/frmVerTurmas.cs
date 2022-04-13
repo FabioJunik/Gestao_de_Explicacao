@@ -116,7 +116,15 @@ namespace Explicacao
 
         private void btnVerHorario_Click(object sender, EventArgs e)
         {
+            if (dgvTurmas.Rows.Count == 0)
+            {
+                principal.Aviso("Não existem dados registados. Impossível conluir esta operação.");
+                return;
+            }
 
+            int codTurma = Convert.ToInt32(dgvTurmas.CurrentRow.Cells[0].Value);
+            frmVerHoraioTurma frm = new frmVerHoraioTurma(codTurma);
+            frm.ShowDialog();
         }
     }
 }

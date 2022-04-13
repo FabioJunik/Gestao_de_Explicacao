@@ -345,3 +345,4 @@ C:\Users\DESKTOP-DEMBO\Downloads\Projecto Explicação\Explicacao-5\Explicacao\o
 C:\Users\DESKTOP-DEMBO\Downloads\Projecto Explicação\Explicacao-5\Explicacao\obj\Debug\Explicacao.frmVerTurmas.resources
 C:\Users\DESKTOP-DEMBO\Downloads\Projecto Explicação\Explicacao-5\Explicacao\obj\Debug\Explicacao.Properties.Resources.resources
 C:\Users\DESKTOP-DEMBO\Downloads\Projecto Explicação\Explicacao-5\Explicacao\obj\Debug\Explicacao.csproj.GenerateResource.Cache
+C:\Users\DESKTOP-DEMBO\Downloads\Projecto Explicação\Explicacao-5\Explicacao\obj\Debug\Explicacao.frmVerHoraioTurma.resources

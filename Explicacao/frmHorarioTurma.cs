@@ -18,12 +18,13 @@ namespace Explicacao
         principal principal = new principal();
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         int codHorario = 0;
-
-        public frmHorarioTurma(int codHorario)
+        int familia = 0;
+        public frmHorarioTurma(int codHorario, int familia)
         {
             InitializeComponent();
             conexao = dbAuxiliar.buscarConexao();
             this.codHorario = codHorario;
+            this.familia = familia;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -47,11 +48,12 @@ namespace Explicacao
                 return;
 
             int codTurma = int.Parse(cmbTurmas.Text.Substring(0, cmbTurmas.Text.IndexOf(" ")));
-
+            
             conexao.Open();
-            MySqlCommand comando = new MySqlCommand("INSERT INTO tbHorario_turma VALUES(@cod_Horario, @cod_Turma)", conexao);
+            MySqlCommand comando = new MySqlCommand("INSERT INTO tbHorario_turma VALUES(@cod_Horario, @cod_Turma, @familia)", conexao);
             comando.Parameters.Add("@cod_Horario", MySqlDbType.Int32).Value = codHorario;
             comando.Parameters.Add("@cod_Turma", MySqlDbType.Int32).Value = codTurma;
+            comando.Parameters.Add("@familia", MySqlDbType.Int32).Value = familia;
             comando.ExecuteNonQuery();
             conexao.Close();
 
