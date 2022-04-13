@@ -46,10 +46,20 @@ namespace Explicacao
             int codTurma = int.Parse(cmbCodTurma.Text.Substring(0, cmbCodTurma.Text.IndexOf(" ")));
 
             conexao.Open();
-            MySqlCommand comando = new MySqlCommand("INSERT INTO tbFalta(dataFalta, cod_Turma, cod_Aluno) VALUES(@dataFalta, @cod_Turma, @cod_Aluno);", conexao);
+            MySqlCommand comando = new MySqlCommand("SELECT cod_Turma FROM tbAluno_Turma WHERE cod_Aluno = @cod_Aluno", conexao);
+            comando.Parameters.Add("@cod_Aluno", MySqlDbType.Int32).Value = codAluno;
+            int cod = Convert.ToInt32(comando.ExecuteScalar());
+
+            if (cod == 0) {
+                principal.Aviso("O aluno selecionado não corresponde a turma selecionada.");
+                conexao.Close();
+                comando.Dispose();
+                return;
+            }
+
+            comando.CommandText = "INSERT INTO tbFalta(dataFalta, cod_Turma, cod_Aluno) VALUES(@dataFalta, @cod_Turma, @cod_Aluno);";
             comando.Parameters.Add("@dataFalta", MySqlDbType.String).Value = dtpDataFalta.Value.ToString("yyyy-MM-dd");
             comando.Parameters.Add("@cod_Turma", MySqlDbType.Int32).Value = codTurma;
-            comando.Parameters.Add("@cod_Aluno", MySqlDbType.Int32).Value = codAluno;
             comando.ExecuteNonQuery();
             conexao.Close();
 
@@ -72,16 +82,14 @@ namespace Explicacao
             registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
             cmbCodAluno.Items.Clear();
             cmbCodAluno.Items.AddRange(registos);
+            cmbCodAluno.Text = cmbCodAluno.Items[0].ToString();
 
             query = "SELECT codTurma, nome FROM tbTurma;";
             queryContagem = "SELECT COUNT(*) FROM tbTurma;";
             registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
             cmbCodTurma.Items.Clear();
             cmbCodTurma.Items.AddRange(registos);
-            
             cmbCodTurma.Text = cmbCodTurma.Items[0].ToString();
-            cmbCodAluno.Text = cmbCodAluno.Items[0].ToString();
-            
         }
 
     }
