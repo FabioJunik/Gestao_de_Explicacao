@@ -29,7 +29,7 @@ namespace Explicacao
         {
             frmCadastrarAdm frm = new frmCadastrarAdm();
             frm.ShowDialog();
-            Atualizar();
+            mostrarDados();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -39,10 +39,10 @@ namespace Explicacao
 
         private void frmConfiguracoes_Load(object sender, EventArgs e)
         {
-            Atualizar();
+            mostrarDados();
         }
 
-        private void Atualizar() {
+        private void mostrarDados() {
             string query = "";
             string queryContagem = "";
             string[] registos;
@@ -134,7 +134,7 @@ namespace Explicacao
                         dbAuxiliar.DefinirUsuarioPorDefeito();
                     }
 
-                    Atualizar();
+                    mostrarDados();
                 }
             }
         }

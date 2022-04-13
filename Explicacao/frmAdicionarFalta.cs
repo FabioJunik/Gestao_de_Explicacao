@@ -42,11 +42,14 @@ namespace Explicacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            int codAluno = int.Parse(cmbCodAluno.Text.Substring(0, cmbCodAluno.Text.IndexOf(" ")));
+            int codTurma = int.Parse(cmbCodTurma.Text.Substring(0, cmbCodTurma.Text.IndexOf(" ")));
+
             conexao.Open();
             MySqlCommand comando = new MySqlCommand("INSERT INTO tbFalta(dataFalta, cod_Turma, cod_Aluno) VALUES(@dataFalta, @cod_Turma, @cod_Aluno);", conexao);
             comando.Parameters.Add("@dataFalta", MySqlDbType.String).Value = dtpDataFalta.Value.ToString("yyyy-MM-dd");
-            comando.Parameters.Add("@cod_Turma", MySqlDbType.Int32).Value = int.Parse(cmbCodTurma.Text);
-            comando.Parameters.Add("@cod_Aluno", MySqlDbType.Int32).Value = int.Parse(cmbCodAluno.Text);
+            comando.Parameters.Add("@cod_Turma", MySqlDbType.Int32).Value = codTurma;
+            comando.Parameters.Add("@cod_Aluno", MySqlDbType.Int32).Value = codAluno;
             comando.ExecuteNonQuery();
             conexao.Close();
 
@@ -56,27 +59,29 @@ namespace Explicacao
 
         private void frmAdicionarFalta_Load(object sender, EventArgs e)
         {
+            mostrarDados();
+        }
 
-            conexao.Open();
-            MySqlCommand comando = new MySqlCommand("SELECT codAluno FROM tbAluno;", conexao);
-            var cods = comando.ExecuteReader();
+        private void mostrarDados() {
+            string query = "";
+            string queryContagem = "";
+            string[] registos;
 
-            while (cods.Read())
-            {
-                cmbCodAluno.Items.Add(cods.GetValue(0));
-            }
+            query = "SELECT codAluno, nome FROM tbAluno;";
+            queryContagem = "SELECT COUNT(*) FROM tbAluno;";
+            registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
+            cmbCodAluno.Items.Clear();
+            cmbCodAluno.Items.AddRange(registos);
 
-            cods.Close();
-            comando.CommandText = "SELECT codTurma FROM tbTurma;";
-            cods = comando.ExecuteReader();
-
-            while (cods.Read())
-            {
-                cmbCodTurma.Items.Add(cods.GetValue(0));
-            }
-
-            cods.Close();
-            conexao.Close();
+            query = "SELECT codTurma, nome FROM tbTurma;";
+            queryContagem = "SELECT COUNT(*) FROM tbTurma;";
+            registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
+            cmbCodTurma.Items.Clear();
+            cmbCodTurma.Items.AddRange(registos);
+            
+            cmbCodTurma.Text = cmbCodTurma.Items[0].ToString();
+            cmbCodAluno.Text = cmbCodAluno.Items[0].ToString();
+            
         }
 
     }

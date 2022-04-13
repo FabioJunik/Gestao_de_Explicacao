@@ -99,8 +99,11 @@ namespace Explicacao
 
             for (int i = 0; i < matriz.GetLength(0); i++) {
                 for (int j = 0; j < matriz.GetLength(1); j++)
-                    vetor[index] += matriz[i, j] + separador;
-                
+                    if (j < matriz.GetLength(1) - 1)
+                        vetor[index] += matriz[i, j] + separador;
+                    else
+                        vetor[index] += matriz[i, j];
+    
                 index++;
             }
 
