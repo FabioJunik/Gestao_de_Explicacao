@@ -121,12 +121,24 @@ namespace Explicacao
 
         private void btnNota_Click(object sender, EventArgs e)
         {
+            if (dgvTurma.Rows.Count == 0)
+            {
+                principal.Aviso("Não existem dados registados. Impossível concluir esta operação.");
+                return;
+            }
+
             int codTurma = Convert.ToInt32(dgvTurma.CurrentRow.Cells[0].Value);
             principal.AbrirFormulario(new frmVerNota(painel,codAluno,codTurma), painel);
         }
 
         private void btnPropina_Click(object sender, EventArgs e)
         {
+            if (dgvTurma.Rows.Count == 0)
+            {
+                principal.Aviso("Não existem dados registados. Impossível concluir esta operação.");
+                return;
+            }
+
             int codTurma = Convert.ToInt32(dgvTurma.CurrentRow.Cells[0].Value);
             principal.AbrirFormulario(new frmVerPropinas(painel, codAluno,codTurma), painel);
         }
@@ -169,7 +181,7 @@ namespace Explicacao
 
 
             query = "SELECT codTurma AS 'Codigo', nome AS 'Nome', dataInicio AS 'Data Inicio' " +
-                    "FROM tbAluno_Turma INNER JOIN tbTurma on codTurma = cod_turma " +
+                    "FROM tbAluno_Turma INNER JOIN tbTurma ON codTurma = cod_turma " +
                     $"WHERE cod_aluno = {codAluno};";
 
             dgvTurma.DataSource = dbAuxiliar.ApresentarResultados(query);

@@ -273,6 +273,8 @@
             // 
             // dgvTurma
             // 
+            this.dgvTurma.AllowUserToAddRows = false;
+            this.dgvTurma.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvTurma.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTurma.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -301,6 +303,7 @@
             this.dgvTurma.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTurma.Location = new System.Drawing.Point(20, 169);
             this.dgvTurma.Name = "dgvTurma";
+            this.dgvTurma.ReadOnly = true;
             this.dgvTurma.RowHeadersVisible = false;
             this.dgvTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTurma.Size = new System.Drawing.Size(356, 379);
@@ -319,7 +322,7 @@
             this.dgvTurma.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvTurma.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvTurma.ThemeStyle.HeaderStyle.Height = 30;
-            this.dgvTurma.ThemeStyle.ReadOnly = false;
+            this.dgvTurma.ThemeStyle.ReadOnly = true;
             this.dgvTurma.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTurma.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTurma.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -104,26 +104,38 @@ namespace Explicacao
         public void actualizarTelefone(string telefone, int cod, int numEntidade)
         {
             string entidade;
-            conexao.Open();
 
             if (numEntidade == 1)
                 entidade = "cod_Aluno";
-
             else if (numEntidade == 0)
                 entidade = "cod_prof";
-
             else
                 entidade = "cod_Encarregado";
 
-            comando = new MySqlCommand("UPDATE tbTelefone SET numero = @telefone " +
-                                       $"WHERE {entidade} = @cod;", conexao);
+            string query = $"SELECT numero FROM tbTelefone WHERE {entidade} = @cod";
 
-            comando.Parameters.Add("@telefone", MySqlDbType.String).Value = telefone;
+            conexao.Open();
+            comando = new MySqlCommand(query, conexao);
             comando.Parameters.Add("@cod", MySqlDbType.Int32).Value = cod;
-            comando.ExecuteNonQuery();
+            string validar = Convert.ToString(comando.ExecuteScalar());
 
-            conexao.Close();
+            if (validar == "")
+            {
 
+                comando.Dispose();
+                conexao.Close();
+                AdicionarContacto(telefone, cod, numEntidade);
+            }
+            else
+            {
+                comando.CommandText = "UPDATE tbTelefone SET numero = @telefone " +
+                                           $"WHERE {entidade} = @cod;";
+
+                comando.Parameters.Add("@telefone", MySqlDbType.String).Value = telefone;
+                comando.ExecuteNonQuery();
+                comando.Dispose();
+                conexao.Close();
+            }
         }
 
         public void actualizarEndereco(int cod, int numEntidade, string municipio, string bairro, string rua)
