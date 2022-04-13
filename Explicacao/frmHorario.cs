@@ -46,10 +46,14 @@ namespace Explicacao
             conexao.Open();
 
             comando = new MySqlCommand("SELECT MAX(familia) FROM tbHorario", conexao);
-            familia = Convert.ToInt32(comando.ExecuteScalar());
+
+            if (DBNull.Value.Equals(comando.ExecuteScalar()))
+                familia = 1;
+            else
+                familia = 1 + Convert.ToInt32(comando.ExecuteScalar());
 
 
-            comando.CommandText = "INSERT INTO tbhorario VALUES(null, @diaSemana, @horaInicio, @horaFim)";
+            comando.CommandText = "INSERT INTO tbhorario VALUES(null, @familia, @diaSemana, @horaInicio, @horaFim)";
 
             foreach (Control controle in this.Controls) 
                 if (controle is Guna.UI2.WinForms.Guna2CheckBox) 
@@ -58,6 +62,7 @@ namespace Explicacao
                         dia = principal.RetornarDiaSemana(controle.Text).ToString();
                         
                         comando.Parameters.Clear();
+                        comando.Parameters.Add("@familia", MySqlDbType.Int32).Value = familia;
                         comando.Parameters.Add("@diaSemana", MySqlDbType.String).Value = dia;
                         comando.Parameters.Add("@horaInicio", MySqlDbType.String).Value = dtpHoraInicio.Text;
                         comando.Parameters.Add("@horaFim", MySqlDbType.String).Value = dtpHoraFim.Text;
@@ -103,7 +108,7 @@ namespace Explicacao
 
         private void mostrarDados()
         {
-            query = "SELECT codHorario AS 'Código', diaSemana AS 'Dias da Semana', " +
+            query = "SELECT codHorario AS 'Código', familia AS 'Família', diaSemana AS 'Dias da Semana', " +
                            "horaInicio AS 'Inicio', horaFim AS 'Fim' FROM tbHorario;";
             dgvHorarios.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
@@ -134,7 +139,7 @@ namespace Explicacao
             int valor = int.Parse(txtPesquisar.Text);
             string miniQuery = $"WHERE codHorario = {valor} Or diaSemana = {valor}";
 
-            query = "SELECT codHorario AS 'Código', diaSemana AS 'Dias da Semana', " +
+            query = "SELECT codHorario AS 'Código', familia AS 'Família', diaSemana AS 'Dias da Semana', " +
                     $"horaInicio AS 'Inicio', horaFim AS 'Fim' FROM tbHorario {miniQuery};";
             dgvHorarios.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
