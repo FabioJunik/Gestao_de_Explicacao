@@ -116,7 +116,7 @@ namespace Explicacao
 
             query = "SELECT a.codAluno, a.nome FROM tbaluno a " +
                     "INNER JOIN tbaluno_turma at ON a.codAluno = at.cod_Aluno " +
-                    "INNER JOIN tbturma t ON t.codTurma = at.cod_Turma " + 
+                    "INNER JOIN tbturma t ON t.codTurma = at.cod_Turma " +
                     "WHERE @codTurma = at.cod_Turma;";
 
             MySqlDataAdapter adaptador = new MySqlDataAdapter(query, conexao);
@@ -192,6 +192,38 @@ namespace Explicacao
             txtQuantProvas.Text = quantProva;
             dtpDataInicio.Text = dataInicio;
             dtpDataFim.Text = dataFim;
+
+            foreach (string prof in cmbProfessor.Items) {
+                if (prof.StartsWith(codProf.ToString()))
+                {
+                    cmbProfessor.Text = prof;
+                    break;
+                }
+            }
+            foreach (string disciplina in cmbDisciplina.Items)
+            {
+                if (disciplina.StartsWith(codDisciplina.ToString()))
+                {
+                    cmbDisciplina.Text = disciplina;
+                    break;
+                }
+            }
+            foreach (string sala in cmbSala.Items)
+            {
+                if (sala.StartsWith(codSala.ToString()))
+                {
+                    cmbSala.Text = sala;
+                    break;
+                }
+            }
+            foreach (string nivel in cmbNivel.Items)
+            {
+                if (nivel.StartsWith(codNivel.ToString()))
+                {
+                    cmbNivel.Text = nivel;
+                    break;
+                }
+            }
         }
     }
 }
