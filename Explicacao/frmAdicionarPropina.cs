@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
 
 namespace Explicacao
@@ -30,6 +31,10 @@ namespace Explicacao
             painel = pnl;
             conexao = dbAuxiliar.buscarConexao();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void frmAdicionarPropina_Load(object sender, EventArgs e)
         {
@@ -104,7 +109,6 @@ namespace Explicacao
             }
         }
 
-
         private void cmbTurmas_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalcularPreco();
@@ -114,6 +118,17 @@ namespace Explicacao
         {
             //Não configurei porque não sei se é o mais corrector dar a possibilidade
             //de apagar um registo de pagamento
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pnlBarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -19,12 +19,18 @@ namespace Explicacao
         principal principal = new principal();
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         Panel painel;
-        int codPropina;
-        public frmPropinas(Panel pnl, int codPropina)
+        MySqlConnection conexao;
+        MySqlCommand comando;
+        int codPropina, quantMeses, codTurma;
+        string dataPagamento;
+        float valor;
+        public frmPropinas(Panel pnl, int codPropina, int codTurma)
         {
             InitializeComponent();
             painel = pnl;
+            conexao = dbAuxiliar.buscarConexao();
             this.codPropina = codPropina;
+            this.codTurma = codTurma;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -39,17 +45,80 @@ namespace Explicacao
         }
         private void frmPropinas_Load(object sender, EventArgs e)
         {
+            mostrarDados();
+        }
+
+        private void mostrarDados() {
+            conexao.Open();
+            comando = new MySqlCommand("SELECT * FROM tbPropina WHERE codPropina = @codPropina;", conexao);
+            comando.Parameters.Add("@codPropina", MySqlDbType.Int32).Value = codPropina;
+            var dados = comando.ExecuteReader();
+
+            while (dados.Read())
+            {
+                quantMeses = dados.GetInt32("quantMeses");
+                valor = dados.GetFloat("valor");
+                dataPagamento = dados.GetDateTime("dataPagamento").ToString().Split(' ')[0];
+            }
+
+            dados.Close();
+            comando.Dispose();
+            conexao.Close();
+
+            txtQuantMeses.Text = quantMeses.ToString();
+            txtValor.Text = valor.ToString();
+            dtpPagamento.Text = dataPagamento.ToString();
         }
         
         private void btnSalvar_Click_1(object sender, EventArgs e)
         {
+            conexao.Open();
+            comando = new MySqlCommand("UPDATE tbPropina SET quantMeses = @quantMeses, " +
+                                       "valor = @valor, dataPagamento = @datapagamento " +
+                                       "WHERE codPropina = @codPropina", conexao);
+            comando.Parameters.Add("@quantMeses", MySqlDbType.Int32).Value = int.Parse(txtQuantMeses.Text);
+            comando.Parameters.Add("@valor", MySqlDbType.Float).Value = float.Parse(txtValor.Text);
+            comando.Parameters.Add("@dataPagamento", MySqlDbType.String).Value = dtpPagamento.Value.ToString("yyyy-MM-dd");
+            comando.Parameters.Add("@codPropina", MySqlDbType.Int32).Value = codPropina;
+            comando.ExecuteNonQuery();
 
+            comando.Dispose();
+            conexao.Close();
+            principal.Aviso("Dados alterados com sucesso!");
         }
 
-        private void pnlBarraTitulo_Paint(object sender, PaintEventArgs e)
+        private void txtQuantMeses_OnValueChanged(object sender, EventArgs e)
         {
+            CalcularPreco();
+        }
+        private float CalcularPreco()
+        {
+            try
+            {
+                float valor;
+                int quantMeses = int.Parse(txtQuantMeses.Text);
 
+                conexao.Open();
+                comando = new MySqlCommand("SELECT preco FROM tbTurma WHERE codTurma = @codTurma", conexao);
+                comando.Parameters.Add("@codTurma", MySqlDbType.Int32).Value = codTurma;
+                valor = (float)Convert.ToDouble(comando.ExecuteScalar());
+
+                txtValor.Text = (valor * quantMeses).ToString();
+
+                comando.Dispose();
+                conexao.Close();
+
+                return valor;
+            }
+            catch
+            {
+                return 0;
+            }
         }
 
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

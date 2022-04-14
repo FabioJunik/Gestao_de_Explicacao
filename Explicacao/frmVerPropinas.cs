@@ -49,12 +49,19 @@ namespace Explicacao
             comando.CommandText = "SELECT nome FROM tbAluno WHERE codAluno = @codAluno;";
             lblNome.Text = Convert.ToString(comando.ExecuteScalar());
 
+            comando.CommandText = "SELECT codAlunoTurma FROM tbAluno_Turma WHERE cod_Aluno = @codAluno AND cod_Turma = @codTurma;";
+            int codAlunoTurma = Convert.ToInt32(comando.ExecuteScalar());
+
             conexao.Close();
 
             string query = "SELECT codPropina AS 'Código', dataPagamento AS 'Data', quantMeses AS 'Quantidade de meses', " +
-                           "valor AS 'Valor pago' FROM tbPropina;";
+                           "valor AS 'Valor pago' FROM tbPropina WHERE cod_AlunoTurma = @codAlunoTurma;";
 
-            dgvPropina.DataSource = dbAuxiliar.ApresentarResultados(query);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(query, conexao);
+            adaptador.SelectCommand.Parameters.Add("@codAlunoTurma", MySqlDbType.Int32).Value = codAlunoTurma;
+            DataTable tabela = new DataTable();
+            adaptador.Fill(tabela);
+            dgvPropina.DataSource = tabela;
 
             dgvPropina.Columns[0].Width = 75;
         }
@@ -67,12 +74,12 @@ namespace Explicacao
                 return;
             }
             int codPropina = Convert.ToInt32(dgvPropina.CurrentRow.Cells[0].Value);
-            principal.AbrirFormulario(new frmPropinas(painel, codPropina), painel);
+            principal.AbrirFormulario(new frmPropinas(painel, codPropina, codTurma), painel);
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            //principal.AbrirFormulario(new frmAdicionarPropina(painel), painel);
+            principal.AbrirFormulario(new frmAdicionarPropina(painel, codAluno, codTurma), painel);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -90,6 +97,13 @@ namespace Explicacao
             if (!principal.Confirmacao("A propina será apagado permanentemente. Deseja continuar?", "APGAR PROPINA"))
                 return;
 
+            int codPropina = Convert.ToInt32(dgvPropina.CurrentRow.Cells[0].Value);
+            conexao.Open();
+            MySqlCommand comando = new MySqlCommand("DELETE FROM tbPropina WHERE codPropina = @codPropina", conexao);
+            comando.Parameters.Add("@codPropina", MySqlDbType.Int32).Value = codPropina;
+            comando.ExecuteNonQuery();
+            conexao.Close();
+            principal.Aviso("Dados eliminados com sucesso!");
         }
         private void pesquisar()
         {

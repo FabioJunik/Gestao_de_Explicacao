@@ -71,6 +71,7 @@
             this.txtQuantMeses.Size = new System.Drawing.Size(364, 42);
             this.txtQuantMeses.TabIndex = 156;
             this.txtQuantMeses.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtQuantMeses.OnValueChanged += new System.EventHandler(this.txtQuantMeses_OnValueChanged);
             // 
             // label4
             // 
@@ -163,6 +164,7 @@
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 1;
             this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // pnlBarraTitulo
             // 
@@ -173,7 +175,6 @@
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
             this.pnlBarraTitulo.Size = new System.Drawing.Size(480, 30);
             this.pnlBarraTitulo.TabIndex = 158;
-            this.pnlBarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraTitulo_Paint);
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             // 
             // guna2Button1
