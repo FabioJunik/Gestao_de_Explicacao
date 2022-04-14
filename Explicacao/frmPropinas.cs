@@ -91,6 +91,7 @@ namespace Explicacao
         {
             CalcularPreco();
         }
+
         private float CalcularPreco()
         {
             try

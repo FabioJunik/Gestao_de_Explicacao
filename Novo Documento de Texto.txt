@@ -1,2 +1,1 @@
-mexer nas notas e propinas
-criar um método que subistitui os números por letras da coluno diaSemana da tabela de horário
+mexer nas notas 
