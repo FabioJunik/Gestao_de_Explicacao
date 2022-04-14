@@ -82,13 +82,13 @@ namespace Explicacao
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            pesquisar();
+            Pesquisar();
         }
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
-                pesquisar();
+                Pesquisar();
         }
 
         private void txtPesquisa_Enter(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace Explicacao
             }
         }
 
-        private void pesquisar()
+        private void Pesquisar()
         {
             string miniQuery = $"WHERE nome LIKE '%{txtPesquisar.Text}%'";
             int numero = 0;

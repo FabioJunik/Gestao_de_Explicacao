@@ -118,6 +118,8 @@ namespace Explicacao
             query = "SELECT codHorario AS 'Código', familia AS 'Família', diaSemana AS 'Dias da Semana', " +
                            "horaInicio AS 'Inicio', horaFim AS 'Fim' FROM tbHorario;";
             dgvHorarios.DataSource = dbAuxiliar.ApresentarResultados(query);
+
+            principal.apresentarDiasSemana(dgvHorarios, 2);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)

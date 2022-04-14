@@ -134,6 +134,53 @@ namespace Explicacao
             frmMessageBox frm = new frmMessageBox(msg, titulo, true);
             frm.ShowDialog();
         }
+
+        public string[] RetornarDiasCorrespondentes(string[] dias) {
+            string[] diasSemana = new string[dias.Length];
+            int index = 0;
+
+            foreach (string dia in dias) {
+                switch (dia) {
+                    case "1":
+                        diasSemana[index] = "Domingo";
+                        break;
+                    case "2":
+                        diasSemana[index] = "Segunda-Feira";
+                        break;
+                    case "3":
+                        diasSemana[index] = "Terça-Feira";
+                        break;
+                    case "4":
+                        diasSemana[index] = "Quarta-Feira";
+                        break;
+                    case "5":
+                        diasSemana[index] = "Quinta-Feira";
+                        break;
+                    case "6":
+                        diasSemana[index] = "Sexta-Feira";
+                        break;
+                    case "7":
+                        diasSemana[index] = "Sábado";
+                        break;
+                }
+
+                index++;
+            }
+
+            return diasSemana;
+        }
+        public void apresentarDiasSemana(DataGridView dgv, int pos = 1)
+        {
+            string[] dias = new string[dgv.Rows.Count];
+
+            for (int i = 0; i < dias.Length; i++)
+                dias[i] = dgv.Rows[i].Cells[pos].Value.ToString();
+
+            dias = RetornarDiasCorrespondentes(dias);
+
+            for (int i = 0; i < dias.Length; i++)
+                dgv.Rows[i].Cells[pos].Value = dias[i];
+        }
     }
 
 }

@@ -1,5 +1,2 @@
-o horário está mal feito no banco de dados tem que ter um valor que indica que são da mesma família,
 mexer nas notas e propinas
-habilitar ver horário turma,
-qunado eu vou em ver mais da turma, não me apresenta os dados nas combobox
-  
+criar um método que subistitui os números por letras da coluno diaSemana da tabela de horário
