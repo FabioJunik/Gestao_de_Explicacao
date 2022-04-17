@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSala));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPesquisar = new Guna.UI2.WinForms.Guna2Button();
@@ -46,33 +46,34 @@
             this.cmbEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtEditeNumero = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumero = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbEditeEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Button2
+            // btnSalvar
             // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(230)))), ((int)(((byte)(119)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(434, 506);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(175, 40);
-            this.guna2Button2.TabIndex = 102;
-            this.guna2Button2.Text = "Salvar alteração";
+            this.btnSalvar.CheckedState.Parent = this.btnSalvar;
+            this.btnSalvar.CustomImages.Parent = this.btnSalvar;
+            this.btnSalvar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(230)))), ((int)(((byte)(119)))));
+            this.btnSalvar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.HoverState.Parent = this.btnSalvar;
+            this.btnSalvar.Location = new System.Drawing.Point(487, 566);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.ShadowDecoration.Parent = this.btnSalvar;
+            this.btnSalvar.Size = new System.Drawing.Size(264, 40);
+            this.btnSalvar.TabIndex = 102;
+            this.btnSalvar.Text = "Salvar alteração";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // guna2VSeparator1
             // 
             this.guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VSeparator1.Location = new System.Drawing.Point(414, 55);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(433, 54);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 573);
             this.guna2VSeparator1.TabIndex = 99;
@@ -127,10 +128,10 @@
             this.btnInseir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInseir.ForeColor = System.Drawing.Color.White;
             this.btnInseir.HoverState.Parent = this.btnInseir;
-            this.btnInseir.Location = new System.Drawing.Point(440, 226);
+            this.btnInseir.Location = new System.Drawing.Point(487, 270);
             this.btnInseir.Name = "btnInseir";
             this.btnInseir.ShadowDecoration.Parent = this.btnInseir;
-            this.btnInseir.Size = new System.Drawing.Size(175, 40);
+            this.btnInseir.Size = new System.Drawing.Size(264, 40);
             this.btnInseir.TabIndex = 95;
             this.btnInseir.Text = "Inseir";
             this.btnInseir.Click += new System.EventHandler(this.btnInseir_Click);
@@ -138,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(436, 115);
+            this.label4.Location = new System.Drawing.Point(483, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 22);
             this.label4.TabIndex = 94;
@@ -192,30 +193,30 @@
             // 
             this.dgvSala.AllowUserToAddRows = false;
             this.dgvSala.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvSala.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvSala.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSala.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSala.BackgroundColor = System.Drawing.Color.White;
             this.dgvSala.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSala.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSala.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSala.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSala.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSala.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSala.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSala.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSala.EnableHeadersVisualStyles = false;
             this.dgvSala.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSala.Location = new System.Drawing.Point(21, 165);
@@ -248,11 +249,12 @@
             this.dgvSala.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSala.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvSala.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSala_CellClick);
+            this.dgvSala.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSala_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(605, 115);
+            this.label1.Location = new System.Drawing.Point(483, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 22);
             this.label1.TabIndex = 103;
@@ -276,16 +278,16 @@
             "Disponível",
             "Indisponível"});
             this.cmbEstado.ItemsAppearance.Parent = this.cmbEstado;
-            this.cmbEstado.Location = new System.Drawing.Point(609, 149);
+            this.cmbEstado.Location = new System.Drawing.Point(487, 218);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.ShadowDecoration.Parent = this.cmbEstado;
-            this.cmbEstado.Size = new System.Drawing.Size(179, 36);
+            this.cmbEstado.Size = new System.Drawing.Size(264, 36);
             this.cmbEstado.TabIndex = 104;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(599, 396);
+            this.label2.Location = new System.Drawing.Point(483, 482);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 22);
             this.label2.TabIndex = 107;
@@ -294,37 +296,37 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(430, 396);
+            this.label5.Location = new System.Drawing.Point(483, 401);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 22);
             this.label5.TabIndex = 106;
             this.label5.Text = "Numero";
             // 
-            // bunifuMaterialTextbox1
+            // txtEditeNumero
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 1;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(434, 422);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(151, 42);
-            this.bunifuMaterialTextbox1.TabIndex = 105;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEditeNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEditeNumero.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditeNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEditeNumero.HintForeColor = System.Drawing.Color.Empty;
+            this.txtEditeNumero.HintText = "";
+            this.txtEditeNumero.isPassword = false;
+            this.txtEditeNumero.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtEditeNumero.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
+            this.txtEditeNumero.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtEditeNumero.LineThickness = 1;
+            this.txtEditeNumero.Location = new System.Drawing.Point(487, 412);
+            this.txtEditeNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditeNumero.Name = "txtEditeNumero";
+            this.txtEditeNumero.Size = new System.Drawing.Size(264, 42);
+            this.txtEditeNumero.TabIndex = 105;
+            this.txtEditeNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 14F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label6.Location = new System.Drawing.Point(435, 68);
+            this.label6.Location = new System.Drawing.Point(483, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 24);
             this.label6.TabIndex = 110;
@@ -335,7 +337,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label7.Location = new System.Drawing.Point(429, 336);
+            this.label7.Location = new System.Drawing.Point(483, 337);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 24);
             this.label7.TabIndex = 111;
@@ -353,33 +355,36 @@
             this.txtNumero.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtNumero.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtNumero.LineThickness = 1;
-            this.txtNumero.Location = new System.Drawing.Point(440, 141);
+            this.txtNumero.Location = new System.Drawing.Point(487, 138);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(151, 42);
+            this.txtNumero.Size = new System.Drawing.Size(264, 42);
             this.txtNumero.TabIndex = 93;
             this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2ComboBox2
+            // cmbEditeEstado
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(603, 428);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
-            this.guna2ComboBox2.Size = new System.Drawing.Size(179, 36);
-            this.guna2ComboBox2.TabIndex = 112;
+            this.cmbEditeEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cmbEditeEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
+            this.cmbEditeEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEditeEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditeEstado.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.cmbEditeEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbEditeEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbEditeEstado.FocusedState.Parent = this.cmbEditeEstado;
+            this.cmbEditeEstado.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbEditeEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbEditeEstado.HoverState.Parent = this.cmbEditeEstado;
+            this.cmbEditeEstado.ItemHeight = 30;
+            this.cmbEditeEstado.Items.AddRange(new object[] {
+            "Disponível",
+            "Indisponível"});
+            this.cmbEditeEstado.ItemsAppearance.Parent = this.cmbEditeEstado;
+            this.cmbEditeEstado.Location = new System.Drawing.Point(487, 512);
+            this.cmbEditeEstado.Name = "cmbEditeEstado";
+            this.cmbEditeEstado.ShadowDecoration.Parent = this.cmbEditeEstado;
+            this.cmbEditeEstado.Size = new System.Drawing.Size(264, 36);
+            this.cmbEditeEstado.TabIndex = 112;
             // 
             // frmSala
             // 
@@ -387,15 +392,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(799, 656);
-            this.Controls.Add(this.guna2ComboBox2);
+            this.Controls.Add(this.cmbEditeEstado);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Controls.Add(this.txtEditeNumero);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnPesquisar);
@@ -420,7 +425,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button btnPesquisar;
@@ -434,10 +439,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEditeNumero;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNumero;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbEditeEstado;
     }
 }

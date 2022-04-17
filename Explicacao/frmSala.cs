@@ -69,7 +69,7 @@ namespace Explicacao
                 return;
             }
 
-            if (!principal.Confirmacao("A sala será apagado permanentemente. Deseja continuar?", "APGAR SALA"))
+            if (!principal.Confirmacao("A sala será apagado permanentemente. Deseja continuar?", "APAGAR SALA"))
                 return;
 
 
@@ -134,6 +134,35 @@ namespace Explicacao
                     $"FROM tbSala {miniQuery};";
 
             dgvSala.DataSource = dbAuxiliar.ApresentarResultados(query);
+        }
+
+        private void dgvSala_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtEditeNumero.Text = dgvSala.CurrentRow.Cells[2].Value.ToString();
+            int estado = int.Parse(dgvSala.CurrentRow.Cells[1].Value.ToString());
+
+            cmbEditeEstado.SelectedIndex = estado == 1 ? 0 : 1;
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            int codSala = Convert.ToInt32(dgvSala.CurrentRow.Cells[0].Value);
+
+            char estado;
+
+            estado = cmbEditeEstado.Text.StartsWith("D") ? '1' : '0';
+
+            conexao.Open();
+
+            MySqlCommand comando = new MySqlCommand("UPDATE  tbSala SET numero = @numero, estado = @estado " +
+                                            $"WHERE codSala = {codSala};", conexao);
+                comando.Parameters.Add("@numero", MySqlDbType.String).Value = txtEditeNumero.Text;
+                comando.Parameters.Add("@estado", MySqlDbType.String).Value = estado;
+                comando.ExecuteNonQuery();
+                mostrarDados();
+                principal.Aviso("Dados actualizados com sucesso");
+            conexao.Close();
         }
     }
 }
