@@ -14,15 +14,23 @@ namespace Explicacao
 {
     public partial class frmAdicionarNota : Form
     {
+        Panel painel;
+        principal principal = new principal();
+        DBAuxiliar dbAuxiliar = new DBAuxiliar();
+        MySqlConnection conexao;
+        MySqlCommand comando;
 
         int codAluno;
         int codTurma;
+        string query;
 
         public frmAdicionarNota(int codAluno, int codTurma)
         {
             InitializeComponent();
             this.codAluno = codAluno;
             this.codTurma = codTurma;
+            conexao = dbAuxiliar.buscarConexao();
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -43,7 +51,37 @@ namespace Explicacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (txtNota.Text == "")
+            {
+                principal.Aviso("Porfavor preencha todos os campos marcados com *.");
+                return;
+            }
 
+                conexao.Open();
+
+                query = "SELECT codAlunoTurma FROM tbAluno_turma " +
+                        $"WHERE cod_Aluno = {codAluno} AND cod_Turma = {codTurma};";
+
+                comando = new MySqlCommand(query,conexao);
+                int codAlunoTurma = Convert.ToInt32(comando.ExecuteScalar());
+
+                comando.CommandText =$"SELECT COUNT(*) FROM tbNota WHERE cod_AlunoTurma = {codAlunoTurma}";
+                int prova = Convert.ToInt32(comando.ExecuteScalar()) + 1;
+
+
+                comando.CommandText="INSERT INTO tbNota VALUES(null,@prova, @nota,@codAlunoTurma );";
+
+                comando.Parameters.Add("@prova", MySqlDbType.String).Value = prova.ToString();
+                comando.Parameters.Add("@nota", MySqlDbType.Float).Value = float.Parse(txtNota.Text);
+                comando.Parameters.Add("@codAlunoTurma", MySqlDbType.Int32).Value = codAlunoTurma;
+
+                comando.ExecuteNonQuery();
+
+
+                conexao.Close();
+
+                principal.LimparCampos(this.Controls);
+                principal.Aviso("Nota inserida com sucesso!");
         }
     }
 }
