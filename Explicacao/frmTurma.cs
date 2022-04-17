@@ -20,12 +20,23 @@ namespace Explicacao
         MySqlConnection conexao;
         MySqlCommand comando;
 
+        bool click = false;
+
         string nome;
         int codTurma, codProf;
         int codDisciplina, codNivel, codSala;
         string maxAluno, cargaHoraria;
         string quantProva, proprina;
         string dataInicio, dataFim;
+
+        public frmTurma(Panel pnl, int codTurma)
+        {
+            InitializeComponent();
+            painel = pnl;
+            painel = pnl;
+            this.codTurma = codTurma;
+            conexao = dbAuxiliar.buscarConexao();
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -50,19 +61,31 @@ namespace Explicacao
             principal.Aviso("Aluno removido com sucesso.");
         }
 
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmVerTurmas(painel), painel);
         }
 
-        public frmTurma(Panel pnl, int codTurma)
+        private void txtPesquisar_Enter(object sender, EventArgs e)
         {
-            InitializeComponent();
-            painel = pnl;
-            painel = pnl;
-            this.codTurma = codTurma;
-            conexao = dbAuxiliar.buscarConexao();
+            if (!click)
+            {
+                txtPesquisar.Text = "";
+                click = true;
+            }
         }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Pesquisar();
+        }
+
 
         private void frmAdiconarTurma_Load(object sender, EventArgs e)
         {
@@ -108,6 +131,7 @@ namespace Explicacao
             frmAlunoTurma frm = new frmAlunoTurma(codTurma,painel);
             frm.ShowDialog();
         }
+
         public void mostrarDados()
         {
             string query = "";
@@ -224,6 +248,24 @@ namespace Explicacao
                     break;
                 }
             }
+        }
+
+
+        private void Pesquisar()
+        {
+            string miniQuery = $"WHERE a.nome LIKE '%{txtPesquisar.Text}%' AND codTurma = {codTurma}";
+            int numero = 0;
+
+            if (int.TryParse(txtPesquisar.Text, out numero))
+                miniQuery = $"WHERE cod_Aluno = {txtPesquisar.Text} AND codTurma = {codTurma}";
+
+ 
+
+            string query = "SELECT codAluno AS 'Codigo', a.nome AS 'Nome' FROM tbaluno a " +
+                           "INNER JOIN tbaluno_turma  ON codAluno = cod_Aluno " +
+                           $"INNER JOIN tbturma  ON codTurma = cod_Turma {miniQuery};";
+
+            dgvAlunosTurma.DataSource = dbAuxiliar.ApresentarResultados(query);
         }
     }
 }
