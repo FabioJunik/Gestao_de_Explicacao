@@ -22,6 +22,8 @@ namespace Explicacao
         string query;
         bool click;
 
+        int codNivel;
+
         public frmNivel(Panel pnl)
         {
             InitializeComponent();
@@ -44,15 +46,14 @@ namespace Explicacao
 
         private void btnNivel_Click(object sender, EventArgs e)
         {
-            int codNivel = Convert.ToInt32(dgvNivel.CurrentRow.Cells[0].Value);
             
-            string query = "UPDATE tbNivel SET nome = @nome" +
+            string query = "UPDATE tbNivel SET nivel = @nivel " +
                            "WHERE codNivel = @codNivel";
             conexao.Open();
             comando = new MySqlCommand(query, conexao);
-            comando.Parameters.Add("@nome", MySqlDbType.String).Value = txtNivel.Text;
+            comando.Parameters.Add("@nivel", MySqlDbType.String).Value = txtNivel.Text;
             comando.Parameters.Add("@codNivel", MySqlDbType.Int32).Value = codNivel;
-            comando.Dispose();
+            comando.ExecuteNonQuery();
             conexao.Close();
             mostrarDados();
 
@@ -126,6 +127,12 @@ namespace Explicacao
             dgvNivel.DataSource = dbAuxiliar.ApresentarResultados(query);
 
             dgvNivel.DataSource = dbAuxiliar.ApresentarResultados(query);
+        }
+
+        private void dgvNivel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            codNivel = Convert.ToInt32(dgvNivel.CurrentRow.Cells[0].Value);
+            txtNivel.Text = dgvNivel.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }
