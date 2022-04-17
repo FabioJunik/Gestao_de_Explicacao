@@ -37,11 +37,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSalvar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFechar = new System.Windows.Forms.PictureBox();
-            this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
+            this.pnlBarraTitulo = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
             this.pnlBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -153,30 +153,6 @@
             this.btnSalvar.Text = "Salvar Alterações";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
-            // btnFechar
-            // 
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(454, 6);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
-            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnFechar.TabIndex = 1;
-            this.btnFechar.TabStop = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // pnlBarraTitulo
-            // 
-            this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.pnlBarraTitulo.Controls.Add(this.btnFechar);
-            this.pnlBarraTitulo.Location = new System.Drawing.Point(8, 4);
-            this.pnlBarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlBarraTitulo.Name = "pnlBarraTitulo";
-            this.pnlBarraTitulo.Size = new System.Drawing.Size(480, 30);
-            this.pnlBarraTitulo.TabIndex = 158;
-            this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
-            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
@@ -189,13 +165,37 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(11, -11);
+            this.guna2Button1.Location = new System.Drawing.Point(1, 1);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(492, 467);
             this.guna2Button1.TabIndex = 159;
             this.guna2Button1.Text = "guna2Button1";
+            // 
+            // pnlBarraTitulo
+            // 
+            this.pnlBarraTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBarraTitulo.Controls.Add(this.btnFechar);
+            this.pnlBarraTitulo.Location = new System.Drawing.Point(7, 7);
+            this.pnlBarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBarraTitulo.Name = "pnlBarraTitulo";
+            this.pnlBarraTitulo.Size = new System.Drawing.Size(482, 30);
+            this.pnlBarraTitulo.TabIndex = 160;
+            this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(460, 3);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnFechar.TabIndex = 1;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // frmPropinas
             // 
@@ -221,8 +221,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPropinas";
             this.Load += new System.EventHandler(this.frmPropinas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,8 +237,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
-        private System.Windows.Forms.PictureBox btnFechar;
-        private System.Windows.Forms.Panel pnlBarraTitulo;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel pnlBarraTitulo;
+        private System.Windows.Forms.PictureBox btnFechar;
     }
 }

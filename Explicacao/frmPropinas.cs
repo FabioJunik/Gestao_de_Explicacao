@@ -48,27 +48,6 @@ namespace Explicacao
             mostrarDados();
         }
 
-        private void mostrarDados() {
-            conexao.Open();
-            comando = new MySqlCommand("SELECT * FROM tbPropina WHERE codPropina = @codPropina;", conexao);
-            comando.Parameters.Add("@codPropina", MySqlDbType.Int32).Value = codPropina;
-            var dados = comando.ExecuteReader();
-
-            while (dados.Read())
-            {
-                quantMeses = dados.GetInt32("quantMeses");
-                valor = dados.GetFloat("valor");
-                dataPagamento = dados.GetDateTime("dataPagamento").ToString().Split(' ')[0];
-            }
-
-            dados.Close();
-            comando.Dispose();
-            conexao.Close();
-
-            txtQuantMeses.Text = quantMeses.ToString();
-            txtValor.Text = valor.ToString();
-            dtpPagamento.Text = dataPagamento.ToString();
-        }
         
         private void btnSalvar_Click_1(object sender, EventArgs e)
         {
@@ -120,6 +99,28 @@ namespace Explicacao
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void mostrarDados() {
+            conexao.Open();
+            comando = new MySqlCommand("SELECT * FROM tbPropina WHERE codPropina = @codPropina;", conexao);
+            comando.Parameters.Add("@codPropina", MySqlDbType.Int32).Value = codPropina;
+            var dados = comando.ExecuteReader();
+
+            while (dados.Read())
+            {
+                quantMeses = dados.GetInt32("quantMeses");
+                valor = dados.GetFloat("valor");
+                dataPagamento = dados.GetDateTime("dataPagamento").ToString().Split(' ')[0];
+            }
+
+            dados.Close();
+            comando.Dispose();
+            conexao.Close();
+
+            txtQuantMeses.Text = quantMeses.ToString();
+            txtValor.Text = valor.ToString();
+            dtpPagamento.Text = dataPagamento.ToString();
         }
     }
 }
