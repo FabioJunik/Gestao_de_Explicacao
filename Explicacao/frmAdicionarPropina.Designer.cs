@@ -35,6 +35,7 @@
             this.txtValor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtQuantMeses = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.pnlBarraTitulo.SuspendLayout();
@@ -125,22 +126,41 @@
             this.txtQuantMeses.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtQuantMeses.OnValueChanged += new System.EventHandler(this.txtQuantMeses_OnValueChanged);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Enabled = false;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(1, 1);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(492, 466);
+            this.guna2Button1.TabIndex = 165;
+            // 
             // pnlBarraTitulo
             // 
-            this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.pnlBarraTitulo.BackColor = System.Drawing.Color.Transparent;
             this.pnlBarraTitulo.Controls.Add(this.btnFechar);
-            this.pnlBarraTitulo.Location = new System.Drawing.Point(2, 11);
+            this.pnlBarraTitulo.Location = new System.Drawing.Point(7, 7);
             this.pnlBarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
-            this.pnlBarraTitulo.Size = new System.Drawing.Size(494, 30);
-            this.pnlBarraTitulo.TabIndex = 146;
+            this.pnlBarraTitulo.Size = new System.Drawing.Size(482, 30);
+            this.pnlBarraTitulo.TabIndex = 166;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             // 
             // btnFechar
             // 
             this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(464, 6);
+            this.btnFechar.Location = new System.Drawing.Point(460, 3);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(18, 18);
@@ -162,6 +182,7 @@
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnInserir);
+            this.Controls.Add(this.guna2Button1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -184,6 +205,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtValor;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtQuantMeses;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel pnlBarraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
     }
