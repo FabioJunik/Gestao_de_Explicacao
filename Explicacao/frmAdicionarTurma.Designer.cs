@@ -29,24 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdicionarTurma));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnVoltar = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnInserir = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgvAlunosTurma = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.dtpDataInicio = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtQuantProvas = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -64,7 +55,6 @@
             this.cmbDisciplina = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbNivel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbSala = new Guna.UI2.WinForms.Guna2ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunosTurma)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -89,26 +79,27 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 16F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label3.Location = new System.Drawing.Point(49, 15);
+            this.label3.Location = new System.Drawing.Point(65, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 27);
+            this.label3.Size = new System.Drawing.Size(129, 27);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Dados da Turma";
+            this.label3.Text = "Nova Turma";
             // 
-            // guna2Button5
+            // btnCancelar
             // 
-            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
-            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(97)))), ((int)(((byte)(129)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.Parent = this.guna2Button5;
-            this.guna2Button5.Location = new System.Drawing.Point(225, 593);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
-            this.guna2Button5.Size = new System.Drawing.Size(175, 40);
-            this.guna2Button5.TabIndex = 28;
-            this.guna2Button5.Text = "Eliminar";
+            this.btnCancelar.CheckedState.Parent = this.btnCancelar;
+            this.btnCancelar.CustomImages.Parent = this.btnCancelar;
+            this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(97)))), ((int)(((byte)(129)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.HoverState.Parent = this.btnCancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(496, 587);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.ShadowDecoration.Parent = this.btnCancelar;
+            this.btnCancelar.Size = new System.Drawing.Size(273, 40);
+            this.btnCancelar.TabIndex = 28;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnInserir
             // 
@@ -117,133 +108,13 @@
             this.btnInserir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.Color.White;
             this.btnInserir.HoverState.Parent = this.btnInserir;
-            this.btnInserir.Location = new System.Drawing.Point(15, 593);
+            this.btnInserir.Location = new System.Drawing.Point(121, 587);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.ShadowDecoration.Parent = this.btnInserir;
-            this.btnInserir.Size = new System.Drawing.Size(175, 40);
+            this.btnInserir.Size = new System.Drawing.Size(276, 40);
             this.btnInserir.TabIndex = 27;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(349, 126);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(51, 36);
-            this.guna2Button1.TabIndex = 26;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Pesquise pelo nome ou codigo";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(13, 126);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 28;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(386, 36);
-            this.guna2TextBox1.TabIndex = 25;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // dgvAlunosTurma
-            // 
-            this.dgvAlunosTurma.AllowUserToAddRows = false;
-            this.dgvAlunosTurma.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvAlunosTurma.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAlunosTurma.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAlunosTurma.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAlunosTurma.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvAlunosTurma.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvAlunosTurma.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlunosTurma.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAlunosTurma.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAlunosTurma.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAlunosTurma.EnableHeadersVisualStyles = false;
-            this.dgvAlunosTurma.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAlunosTurma.Location = new System.Drawing.Point(13, 178);
-            this.dgvAlunosTurma.Name = "dgvAlunosTurma";
-            this.dgvAlunosTurma.ReadOnly = true;
-            this.dgvAlunosTurma.RowHeadersVisible = false;
-            this.dgvAlunosTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAlunosTurma.Size = new System.Drawing.Size(387, 392);
-            this.dgvAlunosTurma.TabIndex = 24;
-            this.dgvAlunosTurma.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dgvAlunosTurma.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAlunosTurma.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvAlunosTurma.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvAlunosTurma.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvAlunosTurma.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvAlunosTurma.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAlunosTurma.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAlunosTurma.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvAlunosTurma.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvAlunosTurma.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAlunosTurma.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvAlunosTurma.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvAlunosTurma.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvAlunosTurma.ThemeStyle.ReadOnly = true;
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAlunosTurma.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(16, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 24);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Alunos da turma";
-            // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VSeparator1.Location = new System.Drawing.Point(423, 76);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 573);
-            this.guna2VSeparator1.TabIndex = 31;
             // 
             // dtpDataInicio
             // 
@@ -252,19 +123,19 @@
             this.dtpDataInicio.ForeColor = System.Drawing.Color.White;
             this.dtpDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataInicio.HoverState.Parent = this.dtpDataInicio;
-            this.dtpDataInicio.Location = new System.Drawing.Point(476, 507);
+            this.dtpDataInicio.Location = new System.Drawing.Point(123, 506);
             this.dtpDataInicio.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.dtpDataInicio.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
             this.dtpDataInicio.Name = "dtpDataInicio";
             this.dtpDataInicio.ShadowDecoration.Parent = this.dtpDataInicio;
-            this.dtpDataInicio.Size = new System.Drawing.Size(176, 36);
+            this.dtpDataInicio.Size = new System.Drawing.Size(274, 36);
             this.dtpDataInicio.TabIndex = 40;
             this.dtpDataInicio.Value = new System.DateTime(2022, 3, 16, 0, 0, 0, 0);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(472, 469);
+            this.label6.Location = new System.Drawing.Point(119, 468);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 22);
             this.label6.TabIndex = 39;
@@ -273,7 +144,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(472, 87);
+            this.label4.Location = new System.Drawing.Point(119, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 22);
             this.label4.TabIndex = 38;
@@ -282,7 +153,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(472, 168);
+            this.label2.Location = new System.Drawing.Point(122, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 22);
             this.label2.TabIndex = 42;
@@ -300,33 +171,17 @@
             this.txtNome.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtNome.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtNome.LineThickness = 1;
-            this.txtNome.Location = new System.Drawing.Point(476, 178);
+            this.txtNome.Location = new System.Drawing.Point(123, 177);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(164, 42);
+            this.txtNome.Size = new System.Drawing.Size(274, 42);
             this.txtNome.TabIndex = 41;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.CheckedState.Parent = this.btnSalvar;
-            this.btnSalvar.CustomImages.Parent = this.btnSalvar;
-            this.btnSalvar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(230)))), ((int)(((byte)(119)))));
-            this.btnSalvar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.HoverState.Parent = this.btnSalvar;
-            this.btnSalvar.Location = new System.Drawing.Point(476, 593);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.ShadowDecoration.Parent = this.btnSalvar;
-            this.btnSalvar.Size = new System.Drawing.Size(357, 40);
-            this.btnSalvar.TabIndex = 60;
-            this.btnSalvar.Text = "Salvar alterações";
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(472, 237);
+            this.label8.Location = new System.Drawing.Point(119, 236);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 22);
             this.label8.TabIndex = 46;
@@ -335,7 +190,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(472, 317);
+            this.label10.Location = new System.Drawing.Point(119, 316);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 22);
             this.label10.TabIndex = 50;
@@ -353,17 +208,17 @@
             this.txtQuantProvas.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtQuantProvas.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtQuantProvas.LineThickness = 1;
-            this.txtQuantProvas.Location = new System.Drawing.Point(476, 403);
+            this.txtQuantProvas.Location = new System.Drawing.Point(123, 402);
             this.txtQuantProvas.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantProvas.Name = "txtQuantProvas";
-            this.txtQuantProvas.Size = new System.Drawing.Size(164, 42);
+            this.txtQuantProvas.Size = new System.Drawing.Size(274, 42);
             this.txtQuantProvas.TabIndex = 53;
             this.txtQuantProvas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(472, 393);
+            this.label12.Location = new System.Drawing.Point(119, 392);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 22);
             this.label12.TabIndex = 54;
@@ -372,7 +227,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(665, 168);
+            this.label5.Location = new System.Drawing.Point(492, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 22);
             this.label5.TabIndex = 44;
@@ -381,7 +236,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(665, 237);
+            this.label7.Location = new System.Drawing.Point(492, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 22);
             this.label7.TabIndex = 48;
@@ -390,7 +245,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(665, 317);
+            this.label9.Location = new System.Drawing.Point(492, 316);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 22);
             this.label9.TabIndex = 52;
@@ -408,10 +263,10 @@
             this.txtQuantMaxAlunos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtQuantMaxAlunos.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtQuantMaxAlunos.LineThickness = 1;
-            this.txtQuantMaxAlunos.Location = new System.Drawing.Point(669, 178);
+            this.txtQuantMaxAlunos.Location = new System.Drawing.Point(496, 177);
             this.txtQuantMaxAlunos.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantMaxAlunos.Name = "txtQuantMaxAlunos";
-            this.txtQuantMaxAlunos.Size = new System.Drawing.Size(164, 42);
+            this.txtQuantMaxAlunos.Size = new System.Drawing.Size(273, 42);
             this.txtQuantMaxAlunos.TabIndex = 43;
             this.txtQuantMaxAlunos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -427,10 +282,10 @@
             this.txtPropina.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtPropina.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtPropina.LineThickness = 1;
-            this.txtPropina.Location = new System.Drawing.Point(669, 327);
+            this.txtPropina.Location = new System.Drawing.Point(496, 326);
             this.txtPropina.Margin = new System.Windows.Forms.Padding(4);
             this.txtPropina.Name = "txtPropina";
-            this.txtPropina.Size = new System.Drawing.Size(164, 42);
+            this.txtPropina.Size = new System.Drawing.Size(273, 42);
             this.txtPropina.TabIndex = 51;
             this.txtPropina.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -446,17 +301,17 @@
             this.txtCargaHoraria.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtCargaHoraria.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtCargaHoraria.LineThickness = 1;
-            this.txtCargaHoraria.Location = new System.Drawing.Point(669, 403);
+            this.txtCargaHoraria.Location = new System.Drawing.Point(496, 402);
             this.txtCargaHoraria.Margin = new System.Windows.Forms.Padding(4);
             this.txtCargaHoraria.Name = "txtCargaHoraria";
-            this.txtCargaHoraria.Size = new System.Drawing.Size(164, 42);
+            this.txtCargaHoraria.Size = new System.Drawing.Size(273, 42);
             this.txtCargaHoraria.TabIndex = 55;
             this.txtCargaHoraria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(665, 393);
+            this.label11.Location = new System.Drawing.Point(492, 392);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 22);
             this.label11.TabIndex = 56;
@@ -465,7 +320,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(653, 469);
+            this.label13.Location = new System.Drawing.Point(492, 468);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 22);
             this.label13.TabIndex = 57;
@@ -478,12 +333,12 @@
             this.dtpDataFim.ForeColor = System.Drawing.Color.White;
             this.dtpDataFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataFim.HoverState.Parent = this.dtpDataFim;
-            this.dtpDataFim.Location = new System.Drawing.Point(657, 507);
+            this.dtpDataFim.Location = new System.Drawing.Point(496, 506);
             this.dtpDataFim.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.dtpDataFim.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
             this.dtpDataFim.Name = "dtpDataFim";
             this.dtpDataFim.ShadowDecoration.Parent = this.dtpDataFim;
-            this.dtpDataFim.Size = new System.Drawing.Size(176, 36);
+            this.dtpDataFim.Size = new System.Drawing.Size(273, 36);
             this.dtpDataFim.TabIndex = 58;
             this.dtpDataFim.Value = new System.DateTime(2022, 3, 16, 0, 0, 0, 0);
             // 
@@ -502,10 +357,10 @@
             this.cmbProfessor.HoverState.Parent = this.cmbProfessor;
             this.cmbProfessor.ItemHeight = 30;
             this.cmbProfessor.ItemsAppearance.Parent = this.cmbProfessor;
-            this.cmbProfessor.Location = new System.Drawing.Point(476, 113);
+            this.cmbProfessor.Location = new System.Drawing.Point(123, 119);
             this.cmbProfessor.Name = "cmbProfessor";
             this.cmbProfessor.ShadowDecoration.Parent = this.cmbProfessor;
-            this.cmbProfessor.Size = new System.Drawing.Size(357, 36);
+            this.cmbProfessor.Size = new System.Drawing.Size(646, 36);
             this.cmbProfessor.TabIndex = 106;
             // 
             // cmbDisciplina
@@ -523,10 +378,10 @@
             this.cmbDisciplina.HoverState.Parent = this.cmbDisciplina;
             this.cmbDisciplina.ItemHeight = 30;
             this.cmbDisciplina.ItemsAppearance.Parent = this.cmbDisciplina;
-            this.cmbDisciplina.Location = new System.Drawing.Point(476, 262);
+            this.cmbDisciplina.Location = new System.Drawing.Point(123, 261);
             this.cmbDisciplina.Name = "cmbDisciplina";
             this.cmbDisciplina.ShadowDecoration.Parent = this.cmbDisciplina;
-            this.cmbDisciplina.Size = new System.Drawing.Size(174, 36);
+            this.cmbDisciplina.Size = new System.Drawing.Size(274, 36);
             this.cmbDisciplina.TabIndex = 107;
             // 
             // cmbNivel
@@ -544,10 +399,10 @@
             this.cmbNivel.HoverState.Parent = this.cmbNivel;
             this.cmbNivel.ItemHeight = 30;
             this.cmbNivel.ItemsAppearance.Parent = this.cmbNivel;
-            this.cmbNivel.Location = new System.Drawing.Point(659, 262);
+            this.cmbNivel.Location = new System.Drawing.Point(496, 261);
             this.cmbNivel.Name = "cmbNivel";
             this.cmbNivel.ShadowDecoration.Parent = this.cmbNivel;
-            this.cmbNivel.Size = new System.Drawing.Size(174, 36);
+            this.cmbNivel.Size = new System.Drawing.Size(273, 36);
             this.cmbNivel.TabIndex = 108;
             // 
             // cmbSala
@@ -565,10 +420,10 @@
             this.cmbSala.HoverState.Parent = this.cmbSala;
             this.cmbSala.ItemHeight = 30;
             this.cmbSala.ItemsAppearance.Parent = this.cmbSala;
-            this.cmbSala.Location = new System.Drawing.Point(478, 342);
+            this.cmbSala.Location = new System.Drawing.Point(125, 341);
             this.cmbSala.Name = "cmbSala";
             this.cmbSala.ShadowDecoration.Parent = this.cmbSala;
-            this.cmbSala.Size = new System.Drawing.Size(174, 36);
+            this.cmbSala.Size = new System.Drawing.Size(272, 36);
             this.cmbSala.TabIndex = 109;
             // 
             // frmAdicionarTurma
@@ -581,7 +436,6 @@
             this.Controls.Add(this.cmbNivel);
             this.Controls.Add(this.cmbDisciplina);
             this.Controls.Add(this.cmbProfessor);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.dtpDataFim);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
@@ -600,13 +454,8 @@
             this.Controls.Add(this.dtpDataInicio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2VSeparator1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2Button5);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.dgvAlunosTurma);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -615,7 +464,6 @@
             this.Name = "frmAdicionarTurma";
             this.Text = "frmTurma";
             this.Load += new System.EventHandler(this.frmTurma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunosTurma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,19 +473,13 @@
 
         private Guna.UI2.WinForms.Guna2Button btnVoltar;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Button btnInserir;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvAlunosTurma;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataInicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNome;
-        private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtQuantProvas;

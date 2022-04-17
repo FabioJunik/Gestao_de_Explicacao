@@ -56,17 +56,12 @@ namespace Explicacao
             principal.AbrirFormulario(new frmVerTurmas(painelPrincipal), painelPrincipal);
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
         {
             int codProf;
             int codTurma;
@@ -106,7 +101,8 @@ namespace Explicacao
                 principal.LimparCampos(this.Controls);
                 principal.Aviso("Dados inserirdos com sucesso!");
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 principal.Aviso("ERRO: " + ex.Message, "ERRO");
             }
         }
