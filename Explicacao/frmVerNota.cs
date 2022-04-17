@@ -46,7 +46,8 @@ namespace Explicacao
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            frmEditarNota frmEditarNota = new frmEditarNota(codAluno,codTurma);
+            int codNota = Convert.ToInt32(dgvNota.CurrentRow.Cells[0].Value);
+            frmEditarNota frmEditarNota = new frmEditarNota(codNota,codAluno,codTurma,painel);
             frmEditarNota.ShowDialog();
         }
 

@@ -164,6 +164,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(163, 40);
             this.btnSalvar.TabIndex = 112;
             this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // guna2Button1
             // 
@@ -204,6 +205,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmEditarNota";
             this.Text = "frmEditarNota";
+            this.Load += new System.EventHandler(this.frmEditarNota_Load);
             this.pnlBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
