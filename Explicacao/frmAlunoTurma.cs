@@ -18,11 +18,14 @@ namespace Explicacao
         MySqlConnection conexao;
         principal principal = new principal();
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
+
+        Panel painel;
         int codTurma = 0;
-        public frmAlunoTurma(int codTurma)
+        public frmAlunoTurma(int codTurma, Panel painel)
         {
             InitializeComponent();
             this.codTurma = codTurma;
+            this.painel = painel;
             conexao = dbAuxiliar.buscarConexao();
         }
 
@@ -30,6 +33,7 @@ namespace Explicacao
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void pnlBarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -39,6 +43,7 @@ namespace Explicacao
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+            principal.AbrirFormulario(new frmTurma(painel, codTurma), painel);
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -67,6 +72,7 @@ namespace Explicacao
             conexao.Close();
 
             principal.Aviso("Dados inseridos com sucesso!");
+
         }
 
         private void frmAlunoTurma_Load(object sender, EventArgs e)
@@ -80,5 +86,6 @@ namespace Explicacao
             registos = principal.ConcaternarMatriz(dbAuxiliar.RetornarRegistosSelecao(query, queryContagem, 2));
             cmbAlunos.Items.AddRange(registos);
         }
+
     }
 }

@@ -46,6 +46,7 @@ namespace Explicacao
             comando.Dispose();
             conexao.Close();
 
+            mostrarDados();
             principal.Aviso("Aluno removido com sucesso.");
         }
 
@@ -104,11 +105,10 @@ namespace Explicacao
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            frmAlunoTurma frm = new frmAlunoTurma(codTurma);
-            mostrarDados();
+            frmAlunoTurma frm = new frmAlunoTurma(codTurma,painel);
             frm.ShowDialog();
         }
-        private void mostrarDados()
+        public void mostrarDados()
         {
             string query = "";
             string queryContagem = "";

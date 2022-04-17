@@ -61,9 +61,9 @@
             this.btnInserir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgvAlunosTurma = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnVoltar = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvAlunosTurma = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunosTurma)).BeginInit();
             this.SuspendLayout();
             // 
@@ -483,6 +483,34 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(386, 36);
             this.guna2TextBox1.TabIndex = 113;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.CheckedState.Parent = this.btnVoltar;
+            this.btnVoltar.CustomImages.Parent = this.btnVoltar;
+            this.btnVoltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btnVoltar.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.HoverState.Parent = this.btnVoltar;
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnVoltar.Location = new System.Drawing.Point(15, 15);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.ShadowDecoration.Parent = this.btnVoltar;
+            this.btnVoltar.Size = new System.Drawing.Size(28, 26);
+            this.btnVoltar.TabIndex = 111;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 16F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
+            this.label3.Location = new System.Drawing.Point(49, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 27);
+            this.label3.TabIndex = 110;
+            this.label3.Text = "Dados da Turma";
+            // 
             // dgvAlunosTurma
             // 
             this.dgvAlunosTurma.AllowUserToAddRows = false;
@@ -542,34 +570,6 @@
             this.dgvAlunosTurma.ThemeStyle.RowsStyle.Height = 22;
             this.dgvAlunosTurma.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAlunosTurma.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.CheckedState.Parent = this.btnVoltar;
-            this.btnVoltar.CustomImages.Parent = this.btnVoltar;
-            this.btnVoltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.btnVoltar.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.HoverState.Parent = this.btnVoltar;
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnVoltar.Location = new System.Drawing.Point(15, 15);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.ShadowDecoration.Parent = this.btnVoltar;
-            this.btnVoltar.Size = new System.Drawing.Size(28, 26);
-            this.btnVoltar.TabIndex = 111;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 16F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label3.Location = new System.Drawing.Point(49, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 27);
-            this.label3.TabIndex = 110;
-            this.label3.Text = "Dados da Turma";
             // 
             // frmTurma
             // 
@@ -655,8 +655,8 @@
         private Guna.UI2.WinForms.Guna2Button btnInserir;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvAlunosTurma;
         private Guna.UI2.WinForms.Guna2Button btnVoltar;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvAlunosTurma;
     }
 }
