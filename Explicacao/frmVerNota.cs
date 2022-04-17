@@ -53,7 +53,27 @@ namespace Explicacao
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dgvNota.Rows.Count == 0)
+            {
+                principal.Aviso("Não existem dados registados. Impossível concluir esta operação.");
+                return;
+            }
 
+            if (!principal.Confirmacao("A nota será apagado permanentemente. Deseja continuar?", "APAGAR NOTA"))
+                return;
+
+            int codNota = Convert.ToInt32(dgvNota.CurrentRow.Cells[0].Value);
+
+            conexao.Open();
+            MySqlCommand comando = new MySqlCommand("DELETE FROM tbNota WHERE codNota = @codNota",conexao);
+
+            comando.Parameters.Add("@codNota", MySqlDbType.Int32).Value = codNota;
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+
+            mostrarDados();
+            principal.Aviso("Dados eliminado com sucesso");
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
