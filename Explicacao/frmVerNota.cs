@@ -15,6 +15,9 @@ namespace Explicacao
     {
         Panel painel;
         principal principal = new principal();
+        DBAuxiliar dbauxiliar = new DBAuxiliar();
+        MySqlConnection conexao;
+        MySqlCommand comando;
 
         int codAluno;
         int codTurma;
@@ -25,6 +28,8 @@ namespace Explicacao
             painel = pnl;
             this.codAluno = codAluno;
             this.codTurma = codTurma;
+            conexao = dbauxiliar.buscarConexao();
+
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -53,6 +58,30 @@ namespace Explicacao
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmVerNota_Load(object sender, EventArgs e)
+        {
+            mostrarDados();
+        }
+
+        private void mostrarDados()
+        {
+            string query ="SELECT codNota AS 'Código', prova AS 'Prova', nota AS 'Nota' FROM tbNota;";
+
+            dgvNota.DataSource = dbauxiliar.ApresentarResultados(query);
+
+            query = $"SELECT nome FROM tbAluno WHERE codAluno = {codAluno} ";
+
+            conexao.Open();
+
+            comando = new MySqlCommand(query, conexao);
+            lblNome.Text = comando.ExecuteScalar().ToString();
+
+            comando.CommandText = $"SELECT nome FROM tbTurma WHERE codTurma = {codTurma}";
+            lblTurma.Text = comando.ExecuteScalar().ToString();
+
+            conexao.Close();
         }
     }
 }
