@@ -21,16 +21,21 @@ namespace Explicacao
         Panel painel;
         MySqlConnection conexao;
         MySqlCommand comando;
-        int codPropina, quantMeses, codTurma;
+
+        int codTurma;
+        int codAluno;
+
+        int codPropina, quantMeses;
         string dataPagamento;
         float valor;
-        public frmPropinas(Panel pnl, int codPropina, int codTurma)
+        public frmPropinas(Panel pnl, int codAluno, int codTurma, int codPropina)
         {
             InitializeComponent();
             painel = pnl;
             conexao = dbAuxiliar.buscarConexao();
             this.codPropina = codPropina;
             this.codTurma = codTurma;
+            this.codAluno = codAluno;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -63,6 +68,10 @@ namespace Explicacao
 
             comando.Dispose();
             conexao.Close();
+
+            this.Close();
+            principal.AbrirFormulario(new frmVerPropinas(painel, codAluno, codTurma), painel);
+
             principal.Aviso("Dados alterados com sucesso!");
         }
 

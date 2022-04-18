@@ -74,6 +74,10 @@ namespace Explicacao
 
                 comando.Dispose();
                 conexao.Close();
+
+                this.Close();
+                principal.AbrirFormulario(new frmVerPropinas(painel,codAluno,codTurma),painel);
+
                 principal.Aviso("Dados inseridos com sucesso!");
             }
             catch (Exception ex) {

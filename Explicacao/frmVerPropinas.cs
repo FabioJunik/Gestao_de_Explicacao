@@ -74,7 +74,7 @@ namespace Explicacao
                 return;
             }
             int codPropina = Convert.ToInt32(dgvPropina.CurrentRow.Cells[0].Value);
-            principal.AbrirFormulario(new frmPropinas(painel, codPropina, codTurma), painel);
+            principal.AbrirFormulario(new frmPropinas(painel,codAluno,codTurma,codPropina), painel);
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
