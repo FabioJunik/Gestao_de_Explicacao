@@ -14,8 +14,9 @@ namespace Explicacao
     public partial class frmVerPropinas : Form
     {
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
-        MySqlConnection conexao;
         principal principal = new principal();
+        MySqlConnection conexao;
+        MySqlCommand comando;
         Panel painel;
 
         int codAluno;
@@ -105,10 +106,25 @@ namespace Explicacao
             conexao.Close();
             principal.Aviso("Dados eliminados com sucesso!");
         }
+
         private void pesquisar()
         {
             string miniQuery ="";
             int numero = 0;
+            string mes = txtPesquisar.Text.Substring(1);
+
+            conexao.Open();
+
+            comando = new MySqlCommand("SELECT codAlunoTurma FROM tbAluno_Turma " +
+                                        "WHERE cod_Aluno = @codAluno AND cod_Turma = @codTurma", conexao);
+            comando.Parameters.Add("@codAluno", MySqlDbType.Int32).Value = codAluno;
+            comando.Parameters.Add("@codTurma", MySqlDbType.Int32).Value = codTurma;
+
+            int codAlunoTurma = Convert.ToInt32(comando.ExecuteScalar());
+
+            conexao.Close();
+
+            miniQuery = $"WHERE (SELECT MONTH (dataPagamento)) = {mes} AND cod_AlunoTurma = {codAlunoTurma}";
 
             if (int.TryParse(txtPesquisar.Text, out numero))
                 miniQuery = $"WHERE codPropina = {txtPesquisar.Text}";

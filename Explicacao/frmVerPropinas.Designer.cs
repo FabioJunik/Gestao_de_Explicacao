@@ -123,7 +123,7 @@
             // 
             this.txtPesquisar.BorderThickness = 0;
             this.txtPesquisar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPesquisar.DefaultText = "Pesquise pelo codigo";
+            this.txtPesquisar.DefaultText = "Pesquise pelo codigo ou /mês ";
             this.txtPesquisar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -140,7 +140,6 @@
             this.txtPesquisar.PasswordChar = '\0';
             this.txtPesquisar.PlaceholderText = "";
             this.txtPesquisar.SelectedText = "";
-            this.txtPesquisar.SelectionStart = 20;
             this.txtPesquisar.ShadowDecoration.Parent = this.txtPesquisar;
             this.txtPesquisar.Size = new System.Drawing.Size(801, 36);
             this.txtPesquisar.TabIndex = 26;
