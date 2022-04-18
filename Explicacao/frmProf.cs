@@ -120,6 +120,12 @@ namespace Explicacao
             comando.Dispose();
             conexao.Close();
 
+            string query = "SELECT cod_turma AS 'Codigo', nome AS 'Nome' " +
+                            "FROM tbProfessor_turma INNER JOIN tbTurma ON codTurma = cod_turma " +
+                            $"WHERE cod_prof = {codProf}";
+
+            dgvTurmasProf.DataSource = dbAuxiliar.ApresentarResultados(query);
+
             txtNome.Text = nome;
             txtEmail.Text = email;
             txtMunicipio.Text = municipio;

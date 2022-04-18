@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProf));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpDataNasc = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.txtRua = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -46,14 +49,13 @@
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnVoltar = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             this.txtNome = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.dgvTurmasProf = new Guna.UI2.WinForms.Guna2DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTurmasProf)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpDataNasc
@@ -63,7 +65,7 @@
             this.dtpDataNasc.ForeColor = System.Drawing.Color.White;
             this.dtpDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNasc.HoverState.Parent = this.dtpDataNasc;
-            this.dtpDataNasc.Location = new System.Drawing.Point(616, 360);
+            this.dtpDataNasc.Location = new System.Drawing.Point(616, 377);
             this.dtpDataNasc.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.dtpDataNasc.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
             this.dtpDataNasc.Name = "dtpDataNasc";
@@ -75,7 +77,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(682, 437);
+            this.label10.Location = new System.Drawing.Point(682, 446);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 22);
             this.label10.TabIndex = 86;
@@ -93,7 +95,7 @@
             this.txtRua.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtRua.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtRua.LineThickness = 1;
-            this.txtRua.Location = new System.Drawing.Point(686, 447);
+            this.txtRua.Location = new System.Drawing.Point(686, 456);
             this.txtRua.Margin = new System.Windows.Forms.Padding(4);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(162, 42);
@@ -103,7 +105,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(487, 437);
+            this.label9.Location = new System.Drawing.Point(487, 446);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 22);
             this.label9.TabIndex = 84;
@@ -121,7 +123,7 @@
             this.txtBairro.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtBairro.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtBairro.LineThickness = 1;
-            this.txtBairro.Location = new System.Drawing.Point(491, 447);
+            this.txtBairro.Location = new System.Drawing.Point(491, 456);
             this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(162, 42);
@@ -131,7 +133,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(280, 437);
+            this.label8.Location = new System.Drawing.Point(280, 446);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 22);
             this.label8.TabIndex = 82;
@@ -149,7 +151,7 @@
             this.txtMunicipio.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtMunicipio.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtMunicipio.LineThickness = 1;
-            this.txtMunicipio.Location = new System.Drawing.Point(284, 447);
+            this.txtMunicipio.Location = new System.Drawing.Point(284, 456);
             this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(179, 42);
@@ -159,7 +161,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(280, 333);
+            this.label7.Location = new System.Drawing.Point(280, 350);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 22);
             this.label7.TabIndex = 80;
@@ -177,7 +179,7 @@
             this.txtTelefone.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtTelefone.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtTelefone.LineThickness = 1;
-            this.txtTelefone.Location = new System.Drawing.Point(284, 354);
+            this.txtTelefone.Location = new System.Drawing.Point(284, 371);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(246, 42);
@@ -187,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(612, 331);
+            this.label6.Location = new System.Drawing.Point(612, 348);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 22);
             this.label6.TabIndex = 78;
@@ -294,37 +296,10 @@
             this.label3.TabIndex = 71;
             this.label3.Text = "Dados do professor\r\n";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(72, 291);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 22);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Add foto";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 80;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(185, 185);
-            this.guna2Button1.Location = new System.Drawing.Point(22, 153);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(172, 172);
-            this.guna2Button1.TabIndex = 69;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(280, 168);
+            this.label1.Location = new System.Drawing.Point(280, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 22);
             this.label1.TabIndex = 68;
@@ -338,10 +313,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.HoverState.Parent = this.btnCancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(591, 571);
+            this.btnCancelar.Location = new System.Drawing.Point(501, 571);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.ShadowDecoration.Parent = this.btnCancelar;
-            this.btnCancelar.Size = new System.Drawing.Size(215, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(238, 40);
             this.btnCancelar.TabIndex = 67;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -354,10 +329,10 @@
             this.btnSalvar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.HoverState.Parent = this.btnSalvar;
-            this.btnSalvar.Location = new System.Drawing.Point(325, 571);
+            this.btnSalvar.Location = new System.Drawing.Point(181, 571);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.ShadowDecoration.Parent = this.btnSalvar;
-            this.btnSalvar.Size = new System.Drawing.Size(215, 40);
+            this.btnSalvar.Size = new System.Drawing.Size(238, 40);
             this.btnSalvar.TabIndex = 66;
             this.btnSalvar.Text = "Salvar ";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -382,26 +357,76 @@
             this.txtNome.TabIndex = 65;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // listBox1
-            // 
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(33, 413);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(177, 198);
-            this.listBox1.TabIndex = 88;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 14F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label11.Location = new System.Drawing.Point(28, 381);
+            this.label11.Location = new System.Drawing.Point(12, 166);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 24);
             this.label11.TabIndex = 89;
             this.label11.Text = "Turmas ";
+            // 
+            // dgvTurmasProf
+            // 
+            this.dgvTurmasProf.AllowUserToAddRows = false;
+            this.dgvTurmasProf.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvTurmasProf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTurmasProf.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTurmasProf.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTurmasProf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTurmasProf.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTurmasProf.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTurmasProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTurmasProf.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTurmasProf.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTurmasProf.EnableHeadersVisualStyles = false;
+            this.dgvTurmasProf.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvTurmasProf.Location = new System.Drawing.Point(16, 207);
+            this.dgvTurmasProf.Name = "dgvTurmasProf";
+            this.dgvTurmasProf.ReadOnly = true;
+            this.dgvTurmasProf.RowHeadersVisible = false;
+            this.dgvTurmasProf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTurmasProf.Size = new System.Drawing.Size(235, 291);
+            this.dgvTurmasProf.TabIndex = 90;
+            this.dgvTurmasProf.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dgvTurmasProf.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvTurmasProf.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvTurmasProf.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvTurmasProf.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvTurmasProf.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvTurmasProf.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvTurmasProf.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvTurmasProf.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvTurmasProf.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTurmasProf.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTurmasProf.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvTurmasProf.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvTurmasProf.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgvTurmasProf.ThemeStyle.ReadOnly = true;
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvTurmasProf.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // frmProf
             // 
@@ -409,8 +434,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(885, 650);
+            this.Controls.Add(this.dgvTurmasProf);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dtpDataNasc);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtRua);
@@ -428,8 +453,6 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -440,6 +463,7 @@
             this.Name = "frmProf";
             this.Text = "frmProf";
             this.Load += new System.EventHandler(this.frmProf_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTurmasProf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,13 +488,11 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Guna.UI2.WinForms.Guna2Button btnVoltar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnCancelar;
         private Guna.UI2.WinForms.Guna2Button btnSalvar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNome;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvTurmasProf;
     }
 }
