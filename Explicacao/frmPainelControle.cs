@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Explicacao
 {
@@ -14,10 +15,16 @@ namespace Explicacao
     {
         Panel painel = new Panel();
         principal principal = new principal();
+        DBAuxiliar dbAuxiliar = new DBAuxiliar();
+        MySqlConnection conexao;
+        MySqlCommand comando;
+
         public frmPainelControle(Panel pnl)
         {
             InitializeComponent();
             painel = pnl;
+            conexao = dbAuxiliar.buscarConexao();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -72,6 +79,33 @@ namespace Explicacao
 
         private void btnConfiguracaoes_Click(object sender, EventArgs e)
         {
+        }
+
+        private void frmPainelControle_Load(object sender, EventArgs e)
+        {
+            string miniQuery = "SELECT COUNT(*) FROM ";
+
+            conexao.Open();
+
+            comando = new MySqlCommand($" {miniQuery} tbAluno;", conexao);
+            btnAluno.LabelText = "Alunos ("+comando.ExecuteScalar()+")";
+
+            comando.CommandText = miniQuery + " tbProfessor;";
+            btnProfessor.LabelText = "Professores (" + comando.ExecuteScalar() + ")";
+
+            comando.CommandText = miniQuery + " tbEncarregado;";
+            btnEncarregado.LabelText = "Encarregados (" + comando.ExecuteScalar() + ")";
+
+            comando.CommandText = miniQuery + " tbTurma;";
+            btnTurma.LabelText = "Turmas (" + comando.ExecuteScalar() + ")";
+
+            comando.CommandText = miniQuery + " tbSala;";
+            btnSala.LabelText = "Sala (" + comando.ExecuteScalar() + ")";
+
+            comando.CommandText = miniQuery + " tbDisciplina;";
+            btnDisciplina.LabelText = "Disciplinas (" + comando.ExecuteScalar() + ")";
+
+            conexao.Close();
         }
     }
 }

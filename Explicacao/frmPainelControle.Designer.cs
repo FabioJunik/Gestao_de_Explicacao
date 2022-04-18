@@ -54,7 +54,7 @@
             this.btnProfessor.ImageZoom = 45;
             this.btnProfessor.LabelPosition = 39;
             this.btnProfessor.LabelText = "Professor";
-            this.btnProfessor.Location = new System.Drawing.Point(76, 106);
+            this.btnProfessor.Location = new System.Drawing.Point(108, 115);
             this.btnProfessor.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnProfessor.Name = "btnProfessor";
             this.btnProfessor.Size = new System.Drawing.Size(200, 140);
@@ -74,7 +74,7 @@
             this.btnAluno.ImageZoom = 45;
             this.btnAluno.LabelPosition = 39;
             this.btnAluno.LabelText = "Aluno (24)";
-            this.btnAluno.Location = new System.Drawing.Point(339, 106);
+            this.btnAluno.Location = new System.Drawing.Point(346, 115);
             this.btnAluno.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnAluno.Name = "btnAluno";
             this.btnAluno.Size = new System.Drawing.Size(200, 140);
@@ -94,7 +94,7 @@
             this.btnEncarregado.ImageZoom = 45;
             this.btnEncarregado.LabelPosition = 39;
             this.btnEncarregado.LabelText = "Encarregado";
-            this.btnEncarregado.Location = new System.Drawing.Point(594, 106);
+            this.btnEncarregado.Location = new System.Drawing.Point(581, 115);
             this.btnEncarregado.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnEncarregado.Name = "btnEncarregado";
             this.btnEncarregado.Size = new System.Drawing.Size(200, 140);
@@ -114,7 +114,7 @@
             this.btnDisciplina.ImageZoom = 45;
             this.btnDisciplina.LabelPosition = 39;
             this.btnDisciplina.LabelText = "Disciplinas (08)";
-            this.btnDisciplina.Location = new System.Drawing.Point(596, 292);
+            this.btnDisciplina.Location = new System.Drawing.Point(581, 282);
             this.btnDisciplina.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnDisciplina.Name = "btnDisciplina";
             this.btnDisciplina.Size = new System.Drawing.Size(200, 140);
@@ -134,7 +134,7 @@
             this.btnSala.ImageZoom = 45;
             this.btnSala.LabelPosition = 39;
             this.btnSala.LabelText = "Sala (05)";
-            this.btnSala.Location = new System.Drawing.Point(341, 292);
+            this.btnSala.Location = new System.Drawing.Point(346, 282);
             this.btnSala.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnSala.Name = "btnSala";
             this.btnSala.Size = new System.Drawing.Size(200, 140);
@@ -154,7 +154,7 @@
             this.btnTurma.ImageZoom = 45;
             this.btnTurma.LabelPosition = 39;
             this.btnTurma.LabelText = "Turmas (10)";
-            this.btnTurma.Location = new System.Drawing.Point(76, 292);
+            this.btnTurma.Location = new System.Drawing.Point(108, 282);
             this.btnTurma.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnTurma.Name = "btnTurma";
             this.btnTurma.Size = new System.Drawing.Size(200, 140);
@@ -166,7 +166,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
-            this.label1.Location = new System.Drawing.Point(68, 52);
+            this.label1.Location = new System.Drawing.Point(98, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 29);
             this.label1.TabIndex = 15;
@@ -186,7 +186,7 @@
             this.btnFalta.ImageZoom = 45;
             this.btnFalta.LabelPosition = 39;
             this.btnFalta.LabelText = "Faltas";
-            this.btnFalta.Location = new System.Drawing.Point(74, 485);
+            this.btnFalta.Location = new System.Drawing.Point(108, 456);
             this.btnFalta.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnFalta.Name = "btnFalta";
             this.btnFalta.Size = new System.Drawing.Size(200, 140);
@@ -206,7 +206,7 @@
             this.btnHorario.ImageZoom = 45;
             this.btnHorario.LabelPosition = 39;
             this.btnHorario.LabelText = "Horário";
-            this.btnHorario.Location = new System.Drawing.Point(344, 485);
+            this.btnHorario.Location = new System.Drawing.Point(346, 456);
             this.btnHorario.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnHorario.Name = "btnHorario";
             this.btnHorario.Size = new System.Drawing.Size(200, 140);
@@ -226,7 +226,7 @@
             this.btnNivel.ImageZoom = 45;
             this.btnNivel.LabelPosition = 39;
             this.btnNivel.LabelText = "Nível";
-            this.btnNivel.Location = new System.Drawing.Point(599, 485);
+            this.btnNivel.Location = new System.Drawing.Point(581, 456);
             this.btnNivel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnNivel.Name = "btnNivel";
             this.btnNivel.Size = new System.Drawing.Size(200, 140);
@@ -255,6 +255,7 @@
             this.MaximizeBox = false;
             this.Name = "frmPainelControle";
             this.Text = "frmPainelControle";
+            this.Load += new System.EventHandler(this.frmPainelControle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
