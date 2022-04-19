@@ -69,7 +69,6 @@ namespace Explicacao
                 e.Handled = true;
         }
 
-
         public void LimparCampos(Control.ControlCollection controls)
         {
             foreach (Control controle in controls)
@@ -169,6 +168,7 @@ namespace Explicacao
 
             return diasSemana;
         }
+
         public void apresentarDiasSemana(DataGridView dgv, int pos = 1)
         {
             string[] dias = new string[dgv.Rows.Count];
@@ -181,6 +181,24 @@ namespace Explicacao
             for (int i = 0; i < dias.Length; i++)
                 dgv.Rows[i].Cells[pos].Value = dias[i];
         }
+
+        public string OrganizarNome(string nome)
+        {
+            string nomes = nome[0].ToString().ToUpper();
+
+            for (int i = 0; i < nome.Length; i++)
+            {
+                if (i > 0)
+                    if (nome[i - 1] == ' ')
+                        nomes += nome[i].ToString().ToUpper();
+                    else
+                        nomes += nome[i].ToString().ToLower();
+
+            }
+
+            return nomes;
+        }
+
     }
 
 }
