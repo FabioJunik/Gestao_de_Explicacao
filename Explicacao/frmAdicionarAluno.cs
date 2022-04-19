@@ -16,6 +16,8 @@ namespace Explicacao
         Panel painel;
         principal principal = new principal();
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
+        validacoes validacoes = new validacoes();
+
         MySqlConnection conexao;
         public frmAdicionarAluno(Panel pnl)
         {
@@ -44,11 +46,7 @@ namespace Explicacao
             string sexo = "";
             string[] telefone;
 
-            if (txtNome.Text == "" || txtTelefone.Text == "" || txtMunicipio.Text == "" || txtBairro.Text == "")
-            {
-                principal.Aviso("Porfavor preencha todos os campos marcados com *.");
-                return;
-            }
+            if (!ValidarCampos()) return;
 
             sexo = rdFemenino.Checked ? "F" : "M";
 
@@ -89,6 +87,58 @@ namespace Explicacao
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             principal.AbrirFormulario(new frmVerAlunos(painel), painel);
+        }
+
+        private bool ValidarCampos()
+        {
+            bool valido = false;
+
+            if (txtNome.Text == "" || txtTelefone.Text == "" || txtMunicipio.Text == "" || txtBairro.Text == "") 
+            {
+                principal.Aviso("Porfavor preencha todos os campos marcados com *.");
+            }
+            else if(!validacoes.NomeValido(txtNome.Text))
+                principal.Aviso("Nome invalido \nVerifique se esta bem escrito");
+
+            else if (!validacoes.NumeroAngola(txtTelefone.Text))
+            {
+                principal.Aviso("Número invalido \nVerifique se esta bem escrito");
+            }
+            else
+            {
+                valido = true;
+            }
+
+
+            return valido;
+
+
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            principal.ApenasTexto(e);
+        }
+
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string telefone = txtTelefone.Text;
+
+            validacoes.ValidarTelefone(e, telefone);
+
+        }
+
+        private void txtNome_Leave(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+
+            if(nome != "")
+                txtNome.Text = principal.OrganizarNome(nome);
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            txtEmail.Text = txtEmail.Text.ToLower();
         }
     }
 }

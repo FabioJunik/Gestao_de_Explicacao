@@ -64,7 +64,7 @@
             this.txtNome.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtNome.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtNome.LineThickness = 1;
-            this.txtNome.Location = new System.Drawing.Point(99, 189);
+            this.txtNome.Location = new System.Drawing.Point(81, 189);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -72,6 +72,8 @@
             this.txtNome.TabIndex = 0;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNome.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
             // 
             // btnSalvar
             // 
@@ -81,7 +83,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.HoverState.Parent = this.btnSalvar;
-            this.btnSalvar.Location = new System.Drawing.Point(99, 568);
+            this.btnSalvar.Location = new System.Drawing.Point(81, 568);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.ShadowDecoration.Parent = this.btnSalvar;
             this.btnSalvar.Size = new System.Drawing.Size(247, 40);
@@ -92,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 163);
+            this.label1.Location = new System.Drawing.Point(77, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 22);
             this.label1.TabIndex = 10;
@@ -129,7 +131,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(95, 253);
+            this.label4.Location = new System.Drawing.Point(77, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 22);
             this.label4.TabIndex = 16;
@@ -147,12 +149,13 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtEmail.LineThickness = 1;
-            this.txtEmail.Location = new System.Drawing.Point(99, 263);
+            this.txtEmail.Location = new System.Drawing.Point(81, 263);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(337, 42);
             this.txtEmail.TabIndex = 15;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // rdMasculino
             // 
@@ -163,7 +166,7 @@
             this.rdMasculino.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdMasculino.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdMasculino.CheckedState.InnerOffset = -4;
-            this.rdMasculino.Location = new System.Drawing.Point(563, 279);
+            this.rdMasculino.Location = new System.Drawing.Point(545, 279);
             this.rdMasculino.Name = "rdMasculino";
             this.rdMasculino.Size = new System.Drawing.Size(95, 26);
             this.rdMasculino.TabIndex = 17;
@@ -177,7 +180,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(559, 249);
+            this.label5.Location = new System.Drawing.Point(541, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 22);
             this.label5.TabIndex = 18;
@@ -191,7 +194,7 @@
             this.rdFemenino.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdFemenino.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdFemenino.CheckedState.InnerOffset = -4;
-            this.rdFemenino.Location = new System.Drawing.Point(720, 279);
+            this.rdFemenino.Location = new System.Drawing.Point(702, 279);
             this.rdFemenino.Name = "rdFemenino";
             this.rdFemenino.Size = new System.Drawing.Size(97, 26);
             this.rdFemenino.TabIndex = 19;
@@ -204,7 +207,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(565, 339);
+            this.label6.Location = new System.Drawing.Point(547, 339);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 22);
             this.label6.TabIndex = 22;
@@ -213,7 +216,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(95, 339);
+            this.label7.Location = new System.Drawing.Point(77, 339);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 22);
             this.label7.TabIndex = 24;
@@ -231,17 +234,18 @@
             this.txtTelefone.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtTelefone.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtTelefone.LineThickness = 1;
-            this.txtTelefone.Location = new System.Drawing.Point(99, 360);
+            this.txtTelefone.Location = new System.Drawing.Point(81, 360);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(337, 42);
             this.txtTelefone.TabIndex = 23;
             this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(95, 445);
+            this.label8.Location = new System.Drawing.Point(77, 445);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 22);
             this.label8.TabIndex = 26;
@@ -259,17 +263,18 @@
             this.txtMunicipio.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtMunicipio.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtMunicipio.LineThickness = 1;
-            this.txtMunicipio.Location = new System.Drawing.Point(99, 461);
+            this.txtMunicipio.Location = new System.Drawing.Point(81, 461);
             this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(210, 42);
             this.txtMunicipio.TabIndex = 25;
             this.txtMunicipio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMunicipio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(351, 445);
+            this.label9.Location = new System.Drawing.Point(333, 445);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 22);
             this.label9.TabIndex = 28;
@@ -287,7 +292,7 @@
             this.txtBairro.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtBairro.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtBairro.LineThickness = 1;
-            this.txtBairro.Location = new System.Drawing.Point(355, 461);
+            this.txtBairro.Location = new System.Drawing.Point(337, 461);
             this.txtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(210, 42);
@@ -297,7 +302,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(611, 445);
+            this.label10.Location = new System.Drawing.Point(593, 445);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 22);
             this.label10.TabIndex = 30;
@@ -315,7 +320,7 @@
             this.txtRua.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(230)))));
             this.txtRua.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtRua.LineThickness = 1;
-            this.txtRua.Location = new System.Drawing.Point(615, 461);
+            this.txtRua.Location = new System.Drawing.Point(597, 461);
             this.txtRua.Margin = new System.Windows.Forms.Padding(4);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(199, 42);
@@ -329,14 +334,14 @@
             this.dtpDataNasc.ForeColor = System.Drawing.Color.White;
             this.dtpDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNasc.HoverState.Parent = this.dtpDataNasc;
-            this.dtpDataNasc.Location = new System.Drawing.Point(567, 375);
-            this.dtpDataNasc.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
+            this.dtpDataNasc.Location = new System.Drawing.Point(549, 375);
+            this.dtpDataNasc.MaxDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtpDataNasc.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
             this.dtpDataNasc.Name = "dtpDataNasc";
             this.dtpDataNasc.ShadowDecoration.Parent = this.dtpDataNasc;
             this.dtpDataNasc.Size = new System.Drawing.Size(247, 36);
             this.dtpDataNasc.TabIndex = 36;
-            this.dtpDataNasc.Value = new System.DateTime(2022, 3, 16, 0, 0, 0, 0);
+            this.dtpDataNasc.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // btnCancelar
             // 
@@ -346,7 +351,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.HoverState.Parent = this.btnCancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(567, 568);
+            this.btnCancelar.Location = new System.Drawing.Point(549, 568);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.ShadowDecoration.Parent = this.btnCancelar;
             this.btnCancelar.Size = new System.Drawing.Size(247, 40);
