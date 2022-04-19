@@ -53,5 +53,39 @@ namespace Explicacao
 
             return inicialNumeroAo.Contains(num.Substring(0, 2)) && num.Length == 9;
         }
+
+        public bool ValidarEmail(string email)
+        {
+            int indexDOT = email.IndexOf('.');
+            int indexA = email.IndexOf('@');
+
+            if (indexA < 0 || indexDOT < 0 || indexDOT == email.Length - 1)
+                return false;
+
+            return indexA < indexDOT && indexA > 0 && indexA + 1 != indexDOT;
+        }
+
+        public bool NomeValido(string nome)
+        {
+            bool retorno = true;
+
+            nome.Trim();
+
+            string[] subNomes = nome.Split(' ');
+
+            if (subNomes.Length == 1)
+                retorno = false;
+
+            for (int i = 0; i < subNomes.Length; i++)
+            {
+                if (subNomes[0].Length < 2)
+                    retorno = false;
+
+                if (subNomes[i].Length <= 1)
+                    retorno = false;
+            }
+
+            return retorno;
+        }
     }
 }
