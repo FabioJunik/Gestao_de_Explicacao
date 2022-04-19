@@ -109,10 +109,7 @@ namespace Explicacao
                 valido = true;
             }
 
-
             return valido;
-
-
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
