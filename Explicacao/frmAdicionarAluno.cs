@@ -100,6 +100,9 @@ namespace Explicacao
             else if(!validacoes.NomeValido(txtNome.Text))
                 principal.Aviso("Nome invalido \nVerifique se esta bem escrito");
 
+            else if (!validacoes.ValidarEmail(txtEmail.Text))
+                principal.Aviso("Email invalido \nVerifique se esta bem escrito");
+
             else if (!validacoes.NumeroAngola(txtTelefone.Text))
             {
                 principal.Aviso("Número invalido \nVerifique se esta bem escrito");
