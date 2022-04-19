@@ -14,9 +14,13 @@ namespace Explicacao
 {
     public partial class frmAdicionarEncarregado : Form
     {
-        MySqlConnection conexao;
         DBAuxiliar dbAuxiliar = new DBAuxiliar();
         principal principal = new principal();
+        validacoes validacoes = new validacoes();
+    
+
+        MySqlConnection conexao;
+
         int codAluno;
         public frmAdicionarEncarregado(int codAluno)
         {
@@ -43,15 +47,12 @@ namespace Explicacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
+
             int codEncarregado;
             string sexo;
             string[] telefone;
-
-            if (txtNome.Text == "" || txtTelefone.Text == "")
-            {
-                principal.Aviso("Porfavor preencha todos os campos marcados com *.");
-                return;
-            }
 
 
             if (rdFemenino.Checked)
@@ -102,6 +103,50 @@ namespace Explicacao
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            principal.ApenasTexto(e);
+
+        }
+
+        private void txtNome_Leave(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+
+            if (nome != "")
+                txtNome.Text = principal.OrganizarNome(nome);
+        }
+
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string telefone = txtTelefone.Text;
+
+            validacoes.ValidarTelefone(e, telefone);
+        }
+
+        private bool ValidarCampos()
+        {
+            bool valido = false;
+
+            if (txtNome.Text == "" || txtTelefone.Text == "")
+            {
+                principal.Aviso("Porfavor preencha todos os campos marcados com *.");
+            }
+            else if (!validacoes.NomeValido(txtNome.Text))
+                principal.Aviso("Nome invalido \nVerifique se esta bem escrito");
+
+            else if (!validacoes.NumeroAngola(txtTelefone.Text))
+            {
+                principal.Aviso("Número invalido \nVerifique se esta bem escrito");
+            }
+            else
+            {
+                valido = true;
+            }
+
+            return valido;
         }
     }
 }

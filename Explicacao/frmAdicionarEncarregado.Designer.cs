@@ -88,6 +88,8 @@
             this.txtNome.Size = new System.Drawing.Size(348, 42);
             this.txtNome.TabIndex = 92;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
             // 
             // label3
             // 
@@ -128,6 +130,7 @@
             this.txtTelefone.Size = new System.Drawing.Size(348, 42);
             this.txtTelefone.TabIndex = 95;
             this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // rdFemenino
             // 
